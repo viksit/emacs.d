@@ -31,10 +31,10 @@
 (require-package 'scratch)
 (require-package 'mwe-log-commands)
 
-(require 'init-frame-hooks)
-(require 'init-xterm)
+;; (require 'init-frame-hooks)
+;; (require 'init-xterm)
 (require 'init-themes)
-(require 'init-osx-keys)
+;; (require 'init-osx-keys)
 (require 'init-gui-frames)
 (require 'init-proxies)
 (require 'init-dired)
@@ -54,24 +54,24 @@
 
 (require 'init-editing-utils)
 
-(require 'init-darcs)
+;; (require 'init-darcs)
 (require 'init-git)
 
 (require 'init-crontab)
-(require 'init-textile)
+;; (require 'init-textile)
 (require 'init-markdown)
 (require 'init-csv)
-(require 'init-erlang)
+;; (require 'init-erlang)
 (require 'init-javascript)
 (require 'init-php)
 (require 'init-org)
-(require 'init-nxml)
+;(require 'init-nxml)
 (require 'init-css)
-(require 'init-haml)
+;(require 'init-haml)
 (require 'init-python-mode)
-(require 'init-haskell)
-(require 'init-ruby-mode)
-(require 'init-rails)
+;(require 'init-haskell)
+;(require 'init-ruby-mode)
+;(require 'init-rails)
 (require 'init-sql)
 
 (require 'init-paredit)
@@ -91,7 +91,7 @@
 ;; Extra packages which don't require any configuration
 
 (require-package 'gnuplot)
-(require-package 'lua-mode)
+;; (require-package 'lua-mode)
 (require-package 'htmlize)
 (require-package 'dsvn)
 (when *is-a-mac*
@@ -101,9 +101,9 @@
 ;;----------------------------------------------------------------------------
 ;; Allow access from emacsclient
 ;;----------------------------------------------------------------------------
-(require 'server)
-(unless (server-running-p)
-  (server-start))
+;; (require 'server)
+;; (unless (server-running-p)
+;;  (server-start))
 
 
 ;;----------------------------------------------------------------------------
@@ -132,8 +132,54 @@
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
 
+;; ---- Tern
+(add-hook 'js-mode-hook (lambda () (tern-mode t)))
+(eval-after-load 'tern
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))
+;; -- End tern
 
+;; (global-set-key [(control p)] 'simp-project-find-file)
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+(global-set-key [(control p)] 'projectile-find-file)
+
+
+(setq ring-bell-function #'ignore)
 (provide 'init)
+;; (disable-paredit-mode)
+
+;; (global-set-key "\C-c" 'comment-or-uncomment-region)
+
+(global-set-key (kbd "C-x ;") 'comment-or-uncomment-region)
+(global-set-key [C-tab] 'other-window)
+
+;; R shortcuts
+;; ESS Mode (.R file)
+(define-key ess-mode-map "\C-e" 'ess-eval-line-and-step)
+(define-key ess-mode-map "\C-p" 'ess-eval-function-or-paragraph-and-step)
+(define-key ess-mode-map "\C-r" 'ess-eval-region)
+
+;; iESS Mode (R console)
+(define-key inferior-ess-mode-map "\C-u" 'comint-kill-input)
+(define-key inferior-ess-mode-map "\C-w" 'backward-kill-word)
+(define-key inferior-ess-mode-map "\C-a" 'comint-bol)
+(define-key inferior-ess-mode-map [home] 'comint-bol)
+
+;; Comint Mode (R console as well)
+(define-key comint-mode-map "\C-e" 'comint-show-maximum-output)
+(define-key comint-mode-map "\C-r" 'comint-show-output)
+(define-key comint-mode-map "\C-o" 'comint-kill-output)
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 2)
+
+(add-hook 'ess-mode-hook
+ '(lambda()
+       (setq indent-tabs-mode nil
+                            tab-width 2)))
+
+
 
 ;; Local Variables:
 ;; coding: utf-8
