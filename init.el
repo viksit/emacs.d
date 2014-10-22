@@ -145,9 +145,10 @@
 (setq projectile-enable-caching t)
 (global-set-key [(control p)] 'projectile-find-file)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 
 (setq ring-bell-function #'ignore)
-(provide 'init)
+
 ;; (disable-paredit-mode)
 
 ;; (global-set-key "\C-c" 'comment-or-uncomment-region)
@@ -155,33 +156,41 @@
 (global-set-key (kbd "C-x ;") 'comment-or-uncomment-region)
 (global-set-key [C-tab] 'other-window)
 
-;; R shortcuts
-;; ESS Mode (.R file)
-(define-key ess-mode-map "\C-e" 'ess-eval-line-and-step)
-(define-key ess-mode-map "\C-p" 'ess-eval-function-or-paragraph-and-step)
-(define-key ess-mode-map "\C-r" 'ess-eval-region)
+;; ;; R shortcuts
+;; ;; ESS Mode (.R file)
+;; (define-key ess-mode-map "\C-e" 'ess-eval-line-and-step)
+;; (define-key ess-mode-map "\C-p" 'ess-eval-function-or-paragraph-and-step)
+;; (define-key ess-mode-map "\C-r" 'ess-eval-region)
 
-;; iESS Mode (R console)
-(define-key inferior-ess-mode-map "\C-u" 'comint-kill-input)
-(define-key inferior-ess-mode-map "\C-w" 'backward-kill-word)
-(define-key inferior-ess-mode-map "\C-a" 'comint-bol)
-(define-key inferior-ess-mode-map [home] 'comint-bol)
+;; ;; iESS Mode (R console)
+;; (define-key inferior-ess-mode-map "\C-u" 'comint-kill-input)
+;; (define-key inferior-ess-mode-map "\C-w" 'backward-kill-word)
+;; (define-key inferior-ess-mode-map "\C-a" 'comint-bol)
+;; (define-key inferior-ess-mode-map [home] 'comint-bol)
 
-;; Comint Mode (R console as well)
-(define-key comint-mode-map "\C-e" 'comint-show-maximum-output)
-(define-key comint-mode-map "\C-r" 'comint-show-output)
-(define-key comint-mode-map "\C-o" 'comint-kill-output)
-(setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+;; ;; Comint Mode (R console as well)
+;; (define-key comint-mode-map "\C-e" 'comint-show-maximum-output)
+;; (define-key comint-mode-map "\C-r" 'comint-show-output)
+;; (define-key comint-mode-map "\C-o" 'comint-kill-output)
+;; (setq-default indent-tabs-mode nil)
+;; (setq-default tab-width 2)
 
-(add-hook 'ess-mode-hook
- '(lambda()
-       (setq indent-tabs-mode nil
-                            tab-width 2)))
+;; (add-hook 'ess-mode-hook
+;;  '(lambda()
+;;        (setq indent-tabs-mode nil
+;;                             tab-width 2)))
 
+;; (when (eq window-system 'ns)
+;;   (defadvice ns-get-pasteboard (around hack-empty-pasteboard compile activate)
+;;     (condition-case err
+;;         ad-do-it
+;;       (quit (message "%s" (cadr err))
+;;             nil))))
 
-
+(setq cider-auto-select-error-buffer t)
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t
 ;; End:
+
+(provide 'init) ;; init.el ends here
