@@ -1,3 +1,5 @@
+(This is @viksit's port - non standard.)
+
 # A reasonable Emacs config
 
 This is my emacs configuration tree, continually used and tweaked
