@@ -1,0 +1,37 @@
+;; Object yelp-dataset/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "yelp-dataset/"
+  :tables
+  (list
+    (semanticdb-table "model.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("gensim.models" include nil nil [1 35])
+            ("gensim" include nil nil [36 49])
+            ("time" include nil nil [50 71])
+            ("logging" include nil nil [72 86])
+            ("logging" code nil nil [87 183])
+            ("getTokens" function (:arguments 
+              ( ("sentence" variable nil (reparse-symbol function_parameters) [200 208])
+                ("removeStops" variable nil (reparse-symbol function_parameters) [210 221]))              ) nil [186 393])
+            ("num_features" variable nil nil [431 449])
+            ("min_word_count" variable nil nil [482 501])
+            ("num_workers" variable nil nil [525 540])
+            ("context" variable nil nil [586 598])
+            ("downsampling" variable nil nil [630 649])
+            ("iterations" variable nil nil [692 706])
+            ("sentences" variable nil nil [768 818])
+            ("t1" variable nil nil [865 876])
+            ("print" code nil nil [877 902])
+            ("gensim_model" variable nil nil [903 1121])
+            ("model_name" variable nil nil [1162 1222])
+            ("gensim_model" code nil nil [1223 1252])
+            ("print" code nil nil [1254 1297]))          
+      :file "model.py"
+      :pointmax 1298
+      :fsize 1297
+      :lastmodtime '(21786 10815 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!viksit!Downloads!yelp-dataset!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

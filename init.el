@@ -68,7 +68,7 @@
 ;(require 'init-nxml)
 (require 'init-css)
 ;(require 'init-haml)
-(require 'init-python-mode)
+; (require 'init-python-mode)
 ;(require 'init-haskell)
 ;(require 'init-ruby-mode)
 ;(require 'init-rails)
@@ -188,6 +188,53 @@
 ;;             nil))))
 
 (setq cider-auto-select-error-buffer t)
+
+
+
+;; Elpy mode for python
+(elpy-enable)
+
+
+;; (add-hook 'python-mode-hook
+          ;; (function (lambda ()
+          ;;             (setq indent-tabs-mode nil
+          ;;                   tab-width 4))))
+
+
+;;(add-hook 'python-mode-hook
+;;          (lambda ()
+;;            (setq indent-tabs-mode nil)
+;;            (setq tab-width 4)
+;;            (setq python-indent 4)))
+
+
+;; (add-hook 'python-mode-hook
+;;       (lambda ()
+;;         (setq-default indent-tabs-mode nil)
+;;         (setq-default tab-width 4)
+;;         (setq-default python-indent 4)))
+;; (setq-default indent-tabs-mode nil)
+;; (setq-default tab-width 2)
+;; (require 'python)
+;; (setq python-shell-interpreter "ipython")
+;; (setq python-shell-interpreter-args "--pylab")
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(load-theme 'wombat t)
+
+(define-globalized-minor-mode my-global-fixme-mode fixme-mode
+  (lambda () (fixme-mode 1)))
+
+(my-global-fixme-mode 1)
+
+;; (require 'fic-mode)
+;; emacs 24
+;; (add-hook 'prog-mode-hook 'fic-mode)
+
+;;(font-lock-add-keywords 'python-mode
+;;  '(("pass" . font-lock-keyword-face)))
+
 ;; Local Variables:
 ;; coding: utf-8
 ;; no-byte-compile: t

@@ -1,0 +1,379 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/Users/viksit/work/convobot/" . "main/")
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/tutorials/" . "mnist/")
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/" . "tutorials/")
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/" . "examples/")
+ ("/Users/viksit/work/udacity-dl/tensorflow/" . "tensorflow/")
+ ("/Users/viksit/work/udacity-dl/" . "tensorflow/")
+ ("/Users/viksit/work/myra/myra/v2/ml/" . "experiments/")
+ ("/Users/viksit/work/myra/myralabs.com/assets/" . "css/")
+ ("/Users/viksit/work/myra/myralabs.com/v5/assets/" . "css/")
+ ("/Users/viksit/work/myra/myralabs.com/v5/" . "assets/")
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/08/20/" . "another-post/")
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/08/" . "20/")
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/" . "08/")
+ ("/Users/viksit/work/myra/myralabs.com/_site/" . "2014/")
+ ("/Users/viksit/work/myra/myralabs.com/" . "assets/")
+ ("/Users/viksit/work/myra/myralabs.github.io/public/" . "css/")
+ ("/Users/viksit/work/myra/myralabs.github.io/" . "_posts/")
+ ("/Users/viksit/Installs/keras/keras/" . "preprocessing/")
+ ("/Users/viksit/Installs/keras/" . "examples/")
+ ("/ssh:ubuntu@52.8.121.87:/home/ubuntu/installs/keras/" . "examples/")
+ ("/ssh:ubuntu@52.8.121.87:/home/ubuntu/installs/" . "keras/")
+ ("/ssh:ubuntu@52.8.121.87:/home/ubuntu/" . "installs/")
+ ("/ssh:ubuntu@52.8.121.87:/home/" . "ubuntu/")
+ ("/ssh:ubuntu@52.8.121.87:/" . "home/")
+ ("/Users/viksit/work/maya/maya/myra2/" . "messaging/")
+ ("/Users/viksit/work/maya/docker/nginx/" . "sites-enabled/")
+ ("/Users/viksit/work/deeplearning/nielsen/neural-networks-and-deep-learning/" . "src/")
+ ("/Users/viksit/work/deeplearning/nielsen/" . "neural-networks-and-deep-learning/")
+ ("/Users/viksit/work/myra/" . "myralabs.com/")
+ ("/Users/viksit/work/deeplearning/keras/" . "examples/")
+ ("/Users/viksit/Installs/" . "keras/")
+ ("/Users/viksit/work/maya/maya/search/crawler/crawler/" . "spiders/")
+ ("/Users/viksit/work/maya/maya/search/crawler/" . "spiders/")
+ ("/Users/viksit/work/maya/maya/search/" . "indexer/")
+ ("/Users/viksit/work/maya/maya/templates/" . "static/")
+ ("/Users/viksit/Downloads/" . "yelp-dataset/")
+ ("/Users/viksit/work/maya/maya/" . "server/")
+ ("/Users/viksit/work/maya/maya/templates/static/" . "js/")
+ ("/Users/viksit/work/maya/temp/" . "bot/")
+ ("/Users/viksit/work/maya/" . "maya/")
+ ("/Users/viksit/work/whatsapp/maya/www/" . "js/")
+ ("/Users/viksit/work/whatsapp/maya/" . "www/")
+ ("/Users/viksit/work/whatsapp/bot/templates/" . "js/")
+ ("/Users/viksit/work/whatsapp/bot/" . "data/")
+ ("/Users/viksit/work/whatsapp/" . "bot/")
+ ("/Users/viksit/" . ".emacs.d/")
+ ("/Users/viksit/work/deeplearning/cs231n/assignment2/cs231n/" . "classifiers/")
+ ("/Users/viksit/work/deeplearning/cs231n/assignment2/" . "cs231n/")
+ ("/Users/viksit/work/deeplearning/cs231n/assignment1/" . "cs231n/")
+ ("/Users/viksit/work/" . "convobot/")
+ ("/Users/viksit/work/deeplearning/cs231n/" . "assignment2/")
+ ("/Users/viksit/work/deeplearning/" . "keras/")
+ ("/Users/viksit/work/deeplearning/cs231n/assignment1/cs231n/" . "classifiers/")
+ ("/Users/viksit/work/cp/" . "data_snapdeal/")
+ ("/Users/viksit/work/crimsonpig/server/src/" . "server/")
+ ("/Users/viksit/work/crimsonpig/server/" . "src/")
+ ("/Users/viksit/work/crimsonpig/crimsonpig/src/" . "crimsonpig/")
+ ("/Users/viksit/work/crimsonpig/" . "server/")
+ ("/Users/viksit/repo/br/work/src/backend/java/src/main/java/com/bloomreach/mobile/p13n/" . "examples/")
+ ("/Users/viksit/repo/br/work/src/backend/java/src/main/java/com/bloomreach/mobile/" . "search/")
+ ("/Users/viksit/repo/br/work/src/backend/java/src/main/java/com/bloomreach/" . "mobile/")
+ ("/Users/viksit/work/flambo/test/" . "flambo/")
+ ("/Users/viksit/work/flambo/src/clojure/" . "flambo/")
+ ("/Users/viksit/work/flambo/src/" . "clojure/")
+ ("/Users/viksit/work/flambo/" . "src/")
+ ("/Users/viksit/work/learn/cljspark/src/" . "cljspark/")
+ ("/Users/viksit/work/learn/cljspark/" . "src/")
+ ("/Users/viksit/work/healthapp/ionic-geofence/www/" . "js/")
+ ("/Users/viksit/work/healthapp/ionic-geofence/" . "www/")
+ ("/Users/viksit/work/learn/functional-mapreduce/src/" . "functional_mapreduce/")
+ ("/Users/viksit/work/learn/functional-mapreduce/" . "src/")
+ ("/Users/viksit/work/learn/scraper/src/" . "scraper/")
+ ("/Users/viksit/work/learn/scraper/" . "src/")
+ ("/Users/viksit/work/healthapp/mine/src/" . "mine/")
+ ("/Users/viksit/work/healthapp/mine/" . "src/")
+ ("/Users/viksit/work/healthapp/" . "mine/")
+ ("/Users/viksit/work/learn/pensieve/resources/public/" . "js/")
+ ("/Users/viksit/work/learn/pensieve/src-cljs/" . "pensieve/")
+ ("/Users/viksit/work/learn/pensieve/resources/" . "templates/")
+ ("/Users/viksit/work/learn/pensieve/" . "src-cljs/")
+ ("/Users/viksit/work/learn/pensieve/src/pensieve/" . "db/")
+ ("/Users/viksit/work/learn/pensieve/src/" . "pensieve/")
+ ("/Users/viksit/work/learn/lumapp/resources/" . "templates/")
+ ("/Users/viksit/work/learn/lumapp/" . "resources/")
+ ("/Users/viksit/work/learn/lumapp/src/" . "lumapp/")
+ ("/Users/viksit/work/learn/parser/src/" . "parser/")
+ ("/Users/viksit/work/learn/parser/" . "src/")
+ ("/Users/viksit/work/learn/ml/src/" . "ml/")
+ ("/Users/viksit/work/learn/" . "pensieve/")
+ ("/mnt/tmp/playframework/framework/" . "src/")
+ ("/mnt/tmp/playframework/" . "framework/")
+ ("/mnt/" . "tmp/")
+ ("/mnt/tmp/" . "playframework/")
+ ("/Users/viksit/work/clojure/om-tut/src/" . "om_tut/")
+ ("/Users/viksit/work/lein-cljsbuild/example-projects/simple/src-cljs/" . "example/")
+ ("/Users/viksit/work/lein-cljsbuild/example-projects/simple/" . "src-cljs/")
+ ("/Users/viksit/work/lein-cljsbuild/example-projects/" . "simple/")
+ ("/Users/viksit/work/lein-cljsbuild/" . "example-projects/")
+ ("/Library/WebServer/" . "Documents/")
+ ("/Library/" . "WebServer/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/Users/viksit/.emacs.d/"
+ "/Users/viksit/work/convobot/main/"
+ "/Users/viksit/work/convobot/crawl/"
+ "/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/tutorials/mnist/"
+ "/Users/viksit/work/udacity-dl/"
+ "/Users/viksit/work/tf/experiments/"
+ "/ssh:ubuntu@gpu-tf:/home/ubuntu/experiments/"
+ "/Users/viksit/work/myra/myra/v1/"
+ "/Users/viksit/work/myra/myra/v2/ml/"
+ "/Users/viksit/work/myra/myra/v2/ml/experiments/"
+ "/Users/viksit/work/myra/myra/v2/"
+ "/Users/viksit/work/myra/myra/v2/server/"
+ "/Users/viksit/work/myra/myra/"
+ "/Users/viksit/work/myra/myra/server/"
+ "/Users/viksit/work/myra/"
+ "/Users/viksit/work/myra/myralabs.com/css/"
+ "/Users/viksit/work/myra/landing/"
+ "/Users/viksit/work/myra/landing/css/"
+ "/Users/viksit/work/myra/myralabs.com/_includes/"
+ "/Users/viksit/work/myra/myralabs.com/assets/css/"
+ "/Users/viksit/work/myra/myralabs.com/"
+ "/Users/viksit/work/myra/myralabs.com/v5/_includes/"
+ "/Users/viksit/work/myra/myralabs.com/v5/"
+ "/Users/viksit/work/myra/myralabs.com/v5/assets/css/"
+ "/Users/viksit/work/myra/myralabs.com/_site/2014/08/20/another-post/"
+ "/tmp/"
+ "/Users/viksit/work/myra/myralabs.github.io/_posts/"
+ "/Users/viksit/work/maya/maya/ml/"
+ "/Users/viksit/work/maya/maya/server/"
+ "/Users/viksit/work/maya/data/datasets/intent/"
+ "/Users/viksit/work/myra/myralabs.github.io/public/css/"
+ "/Users/viksit/work/myra/myralabs.github.io/_includes/"
+ "/Users/viksit/work/myra/myralabs.github.io/"
+ "/Users/viksit/work/myra/myralabs.github.io/_layouts/"
+ "/Users/viksit/Installs/keras/keras/preprocessing/"
+ "/Users/viksit/Installs/keras/examples/"
+ "/Users/viksit/Installs/seq2seq/"
+ "/Users/viksit/Installs/keras/keras/datasets/"
+ "/Users/viksit/work/maya/maya/"
+ "/Users/viksit/work/deeplearning/GloVe-1.2/"
+ "/ssh:ubuntu@52.8.121.87:/home/ubuntu/installs/keras/examples/"
+ "/Users/viksit/work/maya/maya/myra2/"
+ "/Users/viksit/work/maya/maya/myra2/messaging/"
+ "/Users/viksit/work/maya/config/"
+ "/Users/viksit/work/maya/maya/slack_plugins/"
+ "/Users/viksit/work/maya/scripts/"
+ "/Users/viksit/work/deeplearning/keras/examples/"
+ "/Users/viksit/work/learn/pensieve/src-cljs/pensieve/"
+ "/Users/viksit/work/maya/maya/templates/"
+ "/Users/viksit/work/maya/maya/templates/static/js/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "init.el"
+ "word2vec.py"
+ "sources.txt"
+ "fully_connected_feed.py"
+ "mnist_softmax.py"
+ "mnist.py"
+ "1.py"
+ "step1.py"
+ "basic.py"
+ "fetcher.py"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/Users/viksit/.emacs.d/" (22233 60975 0 0) "var/" "url/" "tramp" "todo/" "snippets/" "site-lisp/" "semanticdb/" "request/" "recentf" "README.md" "projectile.cache" "projectile-bookmarks.eld" "lisp/" "init.el" "ido.last" "history" "eshell/" "elpa/" "ede-projects.el" "custom.el" "color-theme/" "auto-save-list/" "ac-comphist.dat" ".session" ".mc-lists.el" ".gitignore" ".git/" ".emacs.desktop.lock" ".emacs.desktop" ".agignore" "#README.md#" "../" "./")
+
+ ("/Users/viksit/" (22233 60951 0 0) "work/" "VirtualBox VMs/" "tmp/" "t.py" "Research/" "Public/" "Pictures/" "nltk_data/" "Music/" "Movies/" "Media/" "Library/" "Installs/" "Google Drive/" "Games/" "FromBackup/" "dump.rdb" "Dropbox/" "Downloads/" "Documents/" "Desktop/" "convnet.py" "Calibre Library/" "backup_gaz" "aws_key.sh" "Applications/" ".yowsup/" ".Xauthority" ".wireshark/" ".vscode/" ".vimrc" ".viminfo" ".vim/" ".vagrant.d/" ".Trash/" ".theanorc" ".theano/" ".subversion/" ".stormy" ".ssh/" ".smex-items" ".serverauth.9829" ".screenrc" ".s3cfg" ".rstudio-desktop/" ".rnd" ".Rhistory" ".RData" ".python_history" ".python-eggs/" ".purple/" ".psql_history" ".parallel/" ".npm/" ".mindterm/" ".matplotlib/" ".local/" ".lesshst" ".keras/" ".ipython/" ".inputrc" ".hgignore_global" ".gvimrc" ".gnupg/" ".gnome2/" ".gitignore_global" ".gitconfig" ".git-prompt.sh" ".gem/" ".erlang.cookie" ".emacs.desktop" ".emacs.d/" ".DS_Store" ".dropbox/" ".docker/" ".disco" ".cups/" ".config/" ".cobe_history" ".CFUserTextEncoding" ".cache/" ".boot2docker/" ".bashrc" ".bash_profile.pysave" ".bash_profile" ".bash_history" ".aws/" ".atom/" "../" "./")
+
+ ("/Users/viksit/work/convobot/main/" (22233 61029 0 0) "word2vec.py" "bot.py" "__init__.py" ".#word2vec.py" "#word2vec.py#" "../" "./")
+
+ ("/Users/viksit/work/convobot/" (22232 38927 0 0) "main/" "data/" "crawl.js" "crawl/" ".git/" "../" "./")
+
+ ("/Users/viksit/work/convobot/crawl/" (22232 36767 0 0) "sources.txt" "../" "./")
+
+ ("/Users/viksit/work/" (22232 36365 0 0) "wiki/" "website/" "udacity-dl/" "tf/" "purcell/" "projects/" "myra/" "convobot/" "blog/" ".sep20.txt.swp" ".DS_Store" ".config_data.swp" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/tutorials/mnist/" (22231 32420 0 0) "mnist_with_summaries.py" "mnist_softmax.py" "mnist.py" "input_data.py" "fully_connected_feed.py" "BUILD" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/tutorials/" (22231 26652 0 0) "word2vec/" "mnist/" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/examples/" (22231 26652 0 0) "udacity/" "tutorials/" "label_image/" "image_retraining/" "how_tos/" "android/" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/tensorflow/tensorflow/" (22231 26652 0 0) "workspace.bzl" "user_ops/" "tools/" "tensorflow.bzl" "tensorboard/" "stream_executor/" "python/" "opensource_only/" "models/" "g3doc/" "examples/" "core/" "contrib/" "cc/" "BUILD" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/tensorflow/" (22231 26652 0 0) "WORKSPACE" "util/" "tools/" "third_party/" "tensorflow/" "six.BUILD" "RELEASE.md" "README.md" "png.BUILD" "navbar.md" "LICENSE" "jpeg.BUILD" "ISSUE_TEMPLATE.md" "google/" "eigen.BUILD" "CONTRIBUTING.md" "configure" "bower.BUILD" "AUTHORS" "ACKNOWLEDGMENTS" ".gitmodules" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/viksit/work/udacity-dl/" (22231 26645 0 0) "tensorflow/" "1.py" "../" "./")
+
+ ("/tmp/" (22231 16644 0 0) "tmp.OrncSfLJUN/" "KSOutOfProcessFetcher.otbPmzqL0b/" "KSOutOfProcessFetcher.501.sAglCyxY5lzPoNgfmEvv-ZqGl-w=/" "KSOutOfProcessFetcher.501.ppfIhqX0vjaTSb8AJYobDV7Cu68=/" "KSOutOfProcessFetcher.0.sAglCyxY5lzPoNgfmEvv-ZqGl-w=/" "KSOutOfProcessFetcher.0.ppfIhqX0vjaTSb8AJYobDV7Cu68=/" "KSInstallAction.sy1ivqChTB/" "KSDownloadAction.HaoVwFZyB2/" "fatline-sparkle-update.lock" "com.apple.launchd.XVGq2uyOrl/" "com.apple.launchd.r628vlRUUZ/" "com.apple.launchd.7JUUlvmhui/" "Atom Crashes/" ".keystone_system_install_lock" ".keystone_install_lock" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/v2/server/" (22227 31992 0 0) "ui.pyc" "ui.py" "templates/" "run.py" "api_v2.pyc" "api_v2.py" "api_utils.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/tf/experiments/" (22227 25667 0 0) "step1.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/v2/ml/" (22230 616 0 0) "tsne.py" "main.py" "glove_server.py" "glove_client.pyc" "glove_client.py" "glove.pyc" "glove.py" "experiments/" "data/" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/v1/" (22226 15543 0 0) "yelp.py" "utils.py" "transaction.py" "theano-experiments.ipynb" "templates/" "telegram_bot.py" "slack_server.py" "slack_plugins/" "shorturl.py" "settings.py" "services.py" "server/" "search/" "run.py" "pip.freeze.20151221.txt" "pickle-data/" "parsers.py" "nlp_experiments.ipynb" "myraplex.py" "myra2/" "myra.log" "ml-nlp.ipynb" "ml/" "mapfile.doctag_syn0norm" "mapfile.doctag_syn0_lockf" "mapfile.doctag_syn0" "main.py" "learner.py" "layer.py" "key_backup.txt" "fysom.py" "fetcher.py" "fb.py" "exceptions.py" "deeplearner.py" "deep-learning-nlp.ipynb" "db.py" "crypto.py" "constants.py" "classifiers.pyc" "classifiers.py" "actions.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/tf/" (22227 25463 0 0) "sync_to_gpu.sh" "start_gpu_sync.sh" "pip-selfcheck.json" "lib/" "include/" "experiments/" "data/" "bin/" ".Python" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/" (22224 55316 0 0) "v2/" "v1/" "settings.pyc" "settings.py" "constants.pyc" "constants.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/v2/ml/experiments/" (22224 45283 0 0) "unused.code" "theano_word2vec_tutorial_viksit.py" "theano_exp.py" "textpredict.py" "store.py" "sequences_example.py" "rnn.py" "ner.py" "keras_weights.py" "emb.npy" "d2v.py" "convnet.py" "conversation.py" "classification.py" "../" "./")
+
+ ("/Users/viksit/Installs/keras/keras/datasets/" (22219 46274 0 0) "reuters.py" "mnist.py" "imdb.py" "data_utils.py" "cifar100.py" "cifar10.py" "cifar.py" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/v2/" (22224 44663 0 0) "utils.pyc" "utils.py" "templates/" "server/" "parser.pyc" "parser.py" "ml/" "messaging/" "classifiers.pyc" "classifiers.py" "asyncutils.py" "api_wrapper.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/myra/" (22223 42784 0 0) "Vagrantfile" "sync_to_ml.sh" "sync_to_gpu.sh" "start_gpu_sync.sh" "scripts/" "requirements.txt" "README" "prod.yml" "old/" "nltk-trainer/" "myra/" "logs/" "fabfile.py" "docs/" "Dockerfile" "docker/" "dev.yml" "data/" "config/" "big_data_set/" ".ipynb_checkpoints/" ".gitignore" ".git/" ".env" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/work/myra/myra/server/" (22223 38414 0 0) "v2.pyc" "v2.py" "ui.pyc" "ui.py" "tmp.py" "run.py" "main.pyc" "main.py" "main.db" "api.pyc" "api.py" "__init__.pyc" "__init__.py" ".#run.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/css/" (22210 18208 0 0) "font-awesome.min.css" "creative.min.css" "creative.css" "bootstrap.min.css" "bootstrap.css" "animate.min.css" ".creative.css.swp" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/" (22210 18208 0 0) "sync_to_wip.sh" "sync_to_prod.sh" "README.md" "package.json" "LICENSE" "less/" "js/" "jobs.html" "index.html" "img/" "Gruntfile.js" "fonts/" "font-awesome/" "favicon.ico" "css/" ".gitignore" ".git/" ".#jobs.html" "#jobs.html#" "../" "./")
+
+ ("/Users/viksit/work/myra/landing/" (22205 2298 0 0) "README.md" "package.json" "LICENSE" "less/" "js/" "jobs.html" "index.html" "img/" "Gruntfile.js" "fonts/" "font-awesome/" "favicon.ico" "css/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/viksit/work/deeplearning/GloVe-1.2/" (22144 33656 0 0) "vocab.txt" "viksit.pyc" "viksit.py" "vectors.txt" "vectors.bin" "tsne.py" "src/" "run.sh" "README" "Makefile" "LICENSE" "eval/" "dump.rdb" "demo.sh" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/" (22190 37100 0 0) "README.md" "public/" "LICENSE.md" "index.html" "CNAME" "atom.xml" "archive.md" "about.md" "_site/" "_posts/" "_layouts/" "_includes/" "_config.yml" "404.html" ".git/" "../" "./")
+
+ ("/Users/viksit/work/maya/data/datasets/intent/" (22143 40918 0 0) "README.md" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/assets/css/" (22197 15701 0 0) "style.css" "style-wide.css" "style-normal.css" "style-narrower.css" "style-narrow.css" "style-mobilep.css" "style-mobile.css" "skel.css" "images/" "ie/" "font-awesome.min.css" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/work/myra/landing/css/" (22202 44361 0 0) "font-awesome.min.css" "creative.min.css" "creative.css" "bootstrap.min.css" "bootstrap.css" "animate.min.css" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/assets/" (22191 64473 0 0) "sass/" "js/" "images/" "fonts/" "css/" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_includes/" (22197 15446 0 0) "nav.html" "header.html" "footer.html" "cta.html" "banner.html" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/v5/_includes/" (22191 65139 0 0) "nav.html" "header.html" "footer.html" "cta.html" "banner.html" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/v5/_layouts/" (22095 20359 0 0) "post.html" "default.html" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/v5/" (22191 65170 0 0) "README.txt" "LICENSE.txt" "index.html" "blog/" "assets/" "_site/" "_posts/" "_layouts/" "_includes/" "_config.yml" ".gitignore" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/v5/assets/css/" (22095 20359 0 0) "style.css" "style-wide.css" "style-normal.css" "style-narrower.css" "style-narrow.css" "style-mobilep.css" "style-mobile.css" "skel.css" "images/" "ie/" "font-awesome.min.css" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/v5/assets/" (22095 20359 0 0) "sass/" "js/" "images/" "fonts/" "css/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/08/20/another-post/" (22190 36938 0 0) "index.html" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/08/20/" (22190 36938 0 0) "another-post/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/08/" (22190 36839 0 0) "31/" "25/" "20/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_site/2014/" (22190 36839 0 0) "08/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.com/_site/" (22190 36938 0 0) "README.txt" "LICENSE.txt" "index.html" "blog/" "assets/" "archive/" "2014/" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/ml/" (22144 31454 0 0) "tsne.py" "theano_word2vec_tutorial_viksit.py" "theano_exp.py" "textpredict.pyc" "textpredict.py" "store.pyc" "store.py" "service_glove.py" "sequences_example.py" "rnn.py" "ner.py" "main.pyc" "main.py" "keras_weights.py" "glove.pyc" "glove.py" "emb.npy" "data/" "d2v.py" "convnet.py" "conversation.pyc" "conversation.py" "classification.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/data/" (22131 4299 0 0) "X_train_vecs.npy" "X_test_vecs.npy" "tsne_vectors.npy" "train_actions_labeled.csv" "test_actions_labeled.csv" "stopwords.txt" "notes.txt" "ner/" "movie_reviews_NaiveBayes.pickle" "movie.txt" "models/" "misc/" "lang_stopwords.txt" "intents.json" "full_neighborhoods.txt" "entities/" "datasets/" "custom_actions.csv" "cache/" "../" "./")
+
+ ("/Users/viksit/work/maya/" (22136 23613 0 0) "wiki/" "testcases/" "sync_to_ml.sh" "sync_to_gpu.sh" "start_gpu_sync.sh" "scripts/" "requirements.txt" "README" "prod.yml" "old/" "nltk-trainer/" "maya/" "logs/" "landing_page/" "fabfile.py" "docs/" "Dockerfile" "docker/" "dev.yml" "data/" "config/" "builds/" "build/" "big_data_set/" "analytics/" ".ipynb_checkpoints/" ".gitignore" ".git/" ".env" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/" (22137 64154 0 0) "yelp.pyc" "yelp.py" "utils.pyc" "utils.py" "tsne.pyc" "transaction.pyc" "transaction.py" "theano-experiments.ipynb" "templates/" "telegram_bot.py" "slack_server.py" "slack_plugins/" "shorturl.py" "settings.pyc" "settings.py" "services.pyc" "services.py" "server/" "search/" "run.py" "query_runner.py" "pip.freeze.20151221.txt" "pickle-data/" "parsers.py" "nlp_experiments.ipynb" "myraplex.py" "myra2/" "ml-nlp.ipynb" "ml/" "maya.log" "mapfile.doctag_syn0norm" "mapfile.doctag_syn0_lockf" "mapfile.doctag_syn0" "main.py" "learner.py" "layer.pyc" "layer.py" "key_backup.txt" "fysom.pyc" "fysom.py" "fetcher.pyc" "fetcher.py" "fb.py" "exceptions.pyc" "exceptions.py" "deeplearner.py" "deep-learning-nlp.ipynb" "db.pyc" "db.py" "data/" "crypto.py" "constants.pyc" "constants.py" "config/" "classifiers.pyc" "classifiers.py" "astronomical_obj_classification.ipynb" "actions.pyc" "actions.py" "__init__.pyc" "__init__.py" ".ipynb_checkpoints/" ".DS_Store" "#async.py#" "../" "./")
+
+ ("/Users/viksit/Installs/keras/examples/" (22137 64182 0 0) "reuters_mlp.py" "ner.tgz" "ner/" "mnist_transfer_cnn.py" "mnist_mlp.py" "mnist_irnn.py" "mnist_cnn.py" "lstm_text_generation.py" "kaggle_otto_nn.py" "imdb_lstm.py" "imdb_cnn_lstm.py" "imdb_cnn.py" "imdb_bidirectional_lstm.py" "conll02_rnn.py" "cifar10_cnn.py" "babi_rnn.py" "babi_memnn.py" "addition_rnn.py" "#addition_rnn.py#" "../" "./")
+
+ ("/Users/viksit/Installs/keras/keras/preprocessing/" (22137 64182 0 0) "text.py" "sequence.py" "image.py" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/server/" (22136 40853 0 0) "v2.pyc" "v2.py" "ui.pyc" "ui.py" "tmp.py" "templates/" "run.py" "main.pyc" "main.py" "main.db" "api.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/_includes/" (22126 2582 0 0) "sidebar.html" "head.html" "ga.html" "disqus.html" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/_posts/" (22129 63659 0 0) "2015-12-12-word2vec-theano.md" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/public/css/" (22127 50060 0 0) "zenburn.css" "t.css" "syntax_backup.css" "syntax.css" "poole.css" "p.css" "lanyon.css" "github.css" "_site/" "../" "./")
+
+ ("/Users/viksit/work/maya/data/datasets/" (22131 4273 0 0) "ner/" "intent/" "../" "./")
+
+ ("/Users/viksit/work/maya/data/" (22131 4299 0 0) "X_train_vecs.npy" "X_test_vecs.npy" "tsne_vectors.npy" "train_actions_labeled.csv" "test_actions_labeled.csv" "stopwords.txt" "notes.txt" "ner/" "movie_reviews_NaiveBayes.pickle" "movie.txt" "models/" "misc/" "lang_stopwords.txt" "intents.json" "full_neighborhoods.txt" "entities/" "datasets/" "custom_actions.csv" "cache/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/public/" (22126 1927 0 0) "favicon.ico" "css/" "apple-touch-icon-precomposed.png" "_site/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/_site/" (22126 2198 0 0) "README.md" "public/" "LICENSE.md" "index.html" "CNAME" "atom.xml" "archive/" "about/" "404.html" "2015/" "../" "./")
+
+ ("/Users/viksit/work/myra/myralabs.github.io/_layouts/" (22126 2112 0 0) "post.html" "page.html" "default.html" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/myra2/" (22112 58770 0 0) "tmp/" "parser.pyc" "parser.py" "messaging/" "classifiers.pyc" "classifiers.py" "asyncutils.py" "api_wrapper.pyc" "api_wrapper.py" "__init__.pyc" "__init__.py" ".#persistence.py" "#persistence.py#" "#classifiers.py#" "../" "./")
+
+ ("/Users/viksit/work/maya/analytics/" (22098 52850 0 0) "spark.py" "analytics.ipynb" ".ipynb_checkpoints/" "../" "./")
+
+ ("/Users/viksit/work/maya/docker/maya/" (22098 52850 0 0) "requirements.txt" "Dockerfile" "../" "./")
+
+ ("/Users/viksit/work/maya/docker/nginx/sites-enabled/" (22098 52850 0 0) "maya-api" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/server/templates/" (22098 52851 0 0) "static/" "register.html" "profile.html" "new.html" "menu.html" "main.html" "login.html" "index.html" "forgot_email_sent.html" "forgot_complete.html" "forgot_change.html" "forgot.html" "content_terms.html" "content_speech.html" "content_profile.html" "content_privacy.html" "content_menu.html" "content_index.html" "content_faq.html" "content_examples.html" "content_demo.html" "content_dashboard.html" "content_channel.html" ".DS_Store" "#new.html#" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/templates/static/js/" (22098 52851 0 0) "speech.js" "platform.js" "index.js" "bootswatch.js" "angular-facebook.min.js" "angular-facebook.js" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/templates/" (22098 52851 0 0) "static/" "register.html" "profile.html" "new.html" "menu.html" "main.html" "login.html" "index.html" "forgot_email_sent.html" "forgot_complete.html" "forgot_change.html" "forgot.html" "content_terms.html" "content_speech.html" "content_profile.html" "content_privacy.html" "content_menu.html" "content_index.html" "content_faq.html" "content_examples.html" "content_demo.html" "content_dashboard.html" "content_channel.html" ".DS_Store" "#new.html#" "../" "./")
+
+ ("/Users/viksit/work/maya/scripts/" (22098 52851 0 0) "stop_remote.sh" "start_mongo.sh" "runtests.sh" "run_analytics.sh" "restart.sh" "package.sh" "index_restore.sh" "index_backup.sh" "generate_gazeteer.py" "db/" "data/" "create_docker.sh" "all_index_restore.sh" "all_index_mapping_2015-07-30.json" "all_index_data_2015-07-30.json" "all_index_backup.sh" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/slack_plugins/" (22098 52851 0 0) "repeat.py" "multiplex.py" "integrations.py" "../" "./")
+
+ ("/Users/viksit/work/maya/config/" (22098 52850 0 0) "wa.config_214" "wa.config" "vimrc" "stormpath_api_key.properties" "slack.conf" "screenrc" "s3cfg" "pip.freeze" "install.sh" "etc/" "access_keys" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/myra2/messaging/" (22098 52850 0 0) "slack.pyc" "slack.py" "service.py" "base.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/crawler/" (22096 53203 0 0) "spiders/" "settings.py" "run_crawl.py" "refinery29.log" "pipelines.py" "items.py" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/deeplearning/" (22098 19634 0 0) "wv-nlp.py" "Word2Vec_AverageVectors.csv" "valentimes.ipynb" "theano_tut.py" "stats1.ipynb" "src/" "nnlp.ipynb" "nlp.ipynb" "nielsen/" "neuralnets.ipynb" "mlp.py" "logistic_sgd.pyc" "logistic_sgd.py" "keras/" "Kaggle Theano Tutorial.ipynb" "installs/" "gpu.py" "glove_theano.py" "glove.py exploration.ipynb" "glove.py/" "GloVe-1.2.zip" "GloVe-1.2/" "glove/" "deeplearning1.ipynb" "data/" "cs231n/" "convnets.ipynb" "Bag_of_Words_model.csv" "300features_40minwords_10context" ".ipynb_checkpoints/" ".git/" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/" (22070 45026 0 0) "thrillist.log" "scrapy.cfg" "refinery29.log" "indexer/" "crawler/" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/crawler/spiders/" (22070 44988 0 0) "urls_thrillist.txt" "urls_refinery29.txt" "urls_eater.txt" "thrillist_spider.py" "refinery29_spider.py" "eater_spider.py" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/indexer/" (22070 45028 0 0) "yelp.py" "schema.json" "places.pyc" "places.py" "opentable.pyc" "opentable.py" "main.pyc" "main.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/templates/static/css/" (22071 57985 0 0) "tmp.css" "timeline.css" "main.css" "jt.css" "bootswatch.min.css" "bootswatch.css" "../" "./")
+
+ ("/Users/viksit/work/learn/pensieve/src-cljs/pensieve/" (21560 50117 0 0) "om-samples.cljs" "core.cljs" "../" "./")
+
+ ("/Users/viksit/work/deeplearning/keras/examples/" (22077 38366 0 0) "skipgram_word_embeddings.py" "reuters_mlp.py" "mnist_mlp.py" "mnist_irnn.py" "mnist_cnn.py" "lstm_text_generation.py" "kaggle_otto_nn.py" "imdb_lstm.py" "imdb_cnn.py" "cifar10_cnn.py" "babi_rnn.py" "addition_rnn.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/platform/" (22045 34783 0 0) "parser.pyc" "parser.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/user/" (21999 52376 0 0) "UserState.pyc" "UserRequestHandler.pyc" "UserManager.pyc" "UserCache.pyc" "ServiceType.py" "Constants.pyc" "__init__.pyc" ".#Constants.py" "#Constants.py#" "../" "./")
+
+ ("/Users/viksit/work/memstore/" (21996 55020 0 0) "User/" "samplecode.py" "requirements.txt" "README.md" "main.py" "DataMigrationScript/" "contributors.txt" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/viksit/work/memstore/User/" (21996 59233 0 0) "UserState.py" "UserRequestHandler.py" "UserManager.py" "UserCache.py" "stormpath.properties" "ServiceType.py" "Constants.py" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/User/" (21999 52376 0 0) "UserState.pyc" "UserRequestHandler.pyc" "UserManager.pyc" "UserCache.pyc" "ServiceType.py" "Constants.pyc" "__init__.pyc" ".#Constants.py" "#Constants.py#" "../" "./")
+
+ ("/Users/viksit/work/deeplearning/nielsen/neural-networks-and-deep-learning/src/" (21999 52926 0 0) "old/" "network3.pyc" "network3.py" "network2.py" "network.py" "mnist_svm.py" "mnist_loader.py" "mnist_average_darkness.py" "expand_mnist.py" "deeplearning-nielsen.ipynb" "conv.py" ".ipynb_checkpoints/" "../" "./")
+
+ ("/Users/viksit/work/pmarca/" (22004 38757 0 0) "shakespeare_input.txt" "recipe-dataset.ttl" "pmarca_3200.json" "pg16328.txt" "gen.py" "fetch.py" "../" "./")
+
+ ("/Users/viksit/work/maya/landing_page/" (21972 61634 0 0) "README.md" "LICENSE" "js/" "index.html" "img/" "fonts/" "font-awesome/" "css/" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/templates/static/" (21963 51029 0 0) "js/" "img/" "css/" ".DS_Store" "../" "./")
+
+ ("/Users/viksit/Installs/elasticsearch-dsl-py/elasticsearch_dsl/" (21954 32158 0 0) "utils.pyc" "utils.py" "search.pyc" "search.py" "result.pyc" "result.py" "query.pyc" "query.py" "mapping.pyc" "mapping.py" "index.pyc" "index.py" "function.pyc" "function.py" "filter.pyc" "filter.py" "field.pyc" "field.py" "faceted_search.pyc" "faceted_search.py" "exceptions.pyc" "exceptions.py" "document.pyc" "document.py" "connections.pyc" "connections.py" "analysis.pyc" "analysis.py" "aggs.pyc" "aggs.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/emerald/" (21953 22073 0 0) "grids.ipynb" "grid.py" "graph.py" ".ipynb_checkpoints/" "../" "./")
+
+ ("/Users/" (21808 54510 0 0) "viksit/" "Shared/" "Guest/" ".localized" "../" "./")
+
+ ("/Users/viksit/Installs/elasticsearch-dsl-py/" (21937 27081 0 0) "test_elasticsearch_dsl/" "setup.py" "setup.cfg" "README.rst" "README" "LICENSE" "elasticsearch_dsl.egg-info/" "elasticsearch_dsl/" "docs/" "dist/" "CONTRIBUTING.md" "Changelog.rst" "build/" "AUTHORS" ".travis.yml" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/viksit/Installs/" (21937 27068 0 0) "ngrok_2.0.19_darwin_amd64.zip" "elasticsearch-dsl-py/" "bin/" "../" "./")
+
+ ("/Users/viksit/work/healthapp/mine/" (21931 26560 0 0) "test/" "target/" "tables.sql" "src/" "sf_restaurants.csv" "scripts/" "resources/" "README.md" "queries.json" "project.clj" "mine.iml" "LICENSE" "doc/" "data/" "bash/" ".lein-repl-history" ".idea/" ".gitignore" "../" "./")
+
+ ("/Users/viksit/work/maya/docs/" (21933 26302 0 0) "notes.md" "design.md" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/crawler/crawler/" (21930 56356 0 0) "spiders/" "settings.pyc" "settings.py" "pipelines.pyc" "pipelines.py" "items.pyc" "items.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/search/crawler/crawler/spiders/" (21930 56616 0 0) "streetAddressParser.pyc" "streetAddressParser.py" "refinery29_spider.pyc" "refinery29_spider.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/maya/maya/utils/" (21929 35364 0 0) "streetAddressParser.py" "__init__.pyc" "__init__.py" "../" "./")
+
+ ("/Users/viksit/work/whatsapp/bot/" (21929 28637 0 0) "yelp.pyc" "yelp.py" "wa.config" "utils.pyc" "transaction.pyc" "transaction.py" "testcases/" "start_mongo.sh" "services.pyc" "services.py" "runtests.sh" "run.py" "requirements.txt" "parser.pyc" "parser.py" "oldcode.py" "old/" "notes.md" "nlp_experiments.ipynb" "nlp.pyc" "maya.pyc" "maya/" "markov.py" "main_nlp.pyc" "main_nlp.py" "layer.pyc" "layer.py" "handlers.pyc" "handlers.py" "fysom.pyc" "fysom.py" "design.md" "data.pyc" "data.py" "data/" "analyze.pyc" "analyze.py" ".ipynb_checkpoints/" ".gitignore" ".git/" "../" "./")
+
+ ("/Users/viksit/work/whatsapp/" (21760 60578 0 0) "yowsup.tar.bz2" "yowsup/" "tags" "pywit/" "parsimonious/" "flaskeleton/" "bot/" "autoping/" "../" "./")
+
+ ("/Users/viksit/work/learn/functional-mapreduce/" (21589 20680 0 0) "ulysses.txt" "u.txt" "test/" "target/" "src/" "resources/" "README.md" "project.clj" "notes.md" "LICENSE" "functional_mapreduce.iml" "doc/" ".nrepl-port" ".lein-repl-history" ".idea/" ".gitignore" ".git/" "../" "./")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t

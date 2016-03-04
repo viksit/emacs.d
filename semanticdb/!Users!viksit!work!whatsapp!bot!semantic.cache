@@ -1,0 +1,40 @@
+;; Object bot/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "bot/"
+  :tables
+  (list
+    (semanticdb-table "run.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("layer" include nil nil [1 27])
+            ("yowsup.layers.auth" include nil nil [28 112])
+            ("yowsup.layers.protocol_messages" include nil nil [113 191])
+            ("yowsup.layers.protocol_receipts" include nil nil [192 269])
+            ("yowsup.layers.protocol_acks" include nil nil [270 343])
+            ("yowsup.layers.network" include nil nil [344 413])
+            ("yowsup.layers.coder" include nil nil [414 481])
+            ("yowsup.layers.protocol_media" include nil nil [482 557])
+            ("yowsup.stacks" include nil nil [558 592])
+            ("yowsup.common" include nil nil [593 631])
+            ("yowsup.layers" include nil nil [632 671])
+            ("yowsup.stacks" include nil nil [672 755])
+            ("yowsup" include nil nil [756 778])
+            ("time" include nil nil [779 790])
+            ("logging" include nil nil [791 805])
+            ("yowsup.layers.protocol_iq.protocolentities" include nil nil [806 871])
+            ("yowsup.layers.protocol_iq" include nil nil [872 911])
+            ("logging" code nil nil [912 954])
+            ("CREDENTIALS" variable nil nil [971 1032])
+            ("if" code nil nil [1073 3235]))          
+      :file "run.py"
+      :pointmax 3235
+      :fsize 3234
+      :lastmodtime '(21747 48690 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "layer.py"
+      :file "layer.py"
+      :fsize 8021
+      :lastmodtime '(21749 6767 0 0)))
+  :file "!Users!viksit!work!whatsapp!bot!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

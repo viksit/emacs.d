@@ -1,0 +1,94 @@
+;; Object templates/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "templates/"
+  :tables
+  (list
+    (semanticdb-table "main.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Home" anchor nil nil [921 924])
+            ("Profile" anchor nil nil [959 962])
+            ("Welcome" section nil nil [1184 2200])
+            ("Step 1" section nil nil [2200 2652])
+            ("Step 2" section nil nil [2652 3215])
+            ("You're done!" section nil nil [3215 4375]))          
+      :file "main.html"
+      :pointmax 4375
+      :fsize 4374
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "menu.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Home" anchor nil nil [929 932])
+            ("Profile" anchor nil nil [967 970])
+            ("Logout" anchor nil nil [1015 1018])
+            ("{{data.venue_name}}" section nil nil [1295 1334])
+            ("" section nil nil [1334 1596]))          
+      :file "menu.html"
+      :pointmax 1596
+      :fsize 1595
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "profile.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Home" anchor nil nil [910 913])
+            ("Profile" anchor nil nil [963 966])
+            ("Logout" anchor nil nil [1011 1014])
+            ("Instructions" section (:members 
+              ( ("Maya" anchor nil nil [1482 1485])
+                ("Click here" anchor nil nil [1633 1636]))              ) nil [1317 1811])
+            ("Profile information" section nil nil [1811 2041])
+            ("Venmo" section nil nil [2041 2601])
+            ("Uber - coming soon" section nil nil [2601 3119]))          
+      :file "profile.html"
+      :pointmax 3119
+      :fsize 3118
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "index.html"
+      :major-mode 'html-mode
+      :tags 
+        '( ("Maya.ai - {% block title %}{% endblock %}" section nil nil [294 709])
+            ("{% block header %}{% endblock %}
+      {% block content %}{% endblock %}
+      <div class=\"container\">
+        <footer class=\"footer\">
+          <p>&copy; Maya 2015" section nil nil [709 986])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61477842-1', 'auto');
+    ga('send', 'pageview');" section nil nil [986 1078])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61477842-1', 'auto');
+    ga('send', 'pageview');" section nil nil [1078 1172])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61477842-1', 'auto');
+    ga('send', 'pageview');" section nil nil [1172 1211])
+            ("(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61477842-1', 'auto');
+    ga('send', 'pageview');" section nil nil [1211 1643]))          
+      :file "index.html"
+      :pointmax 1643
+      :fsize 1642
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!viksit!work!maya!maya!templates!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

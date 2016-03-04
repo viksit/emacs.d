@@ -1,0 +1,2763 @@
+;; Object maya/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "maya/"
+  :tables
+  (list
+    (semanticdb-table "parsers.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Description: The maya action engine.
+Version: 0.2
+Author: viksit@gmail.com
+\"\"\"" code nil nil [26 108])
+            ("__future__" include nil nil [110 149])
+            ("spacy" include nil nil [164 176])
+            ("spacy.en.attrs" include nil nil [177 205])
+            ("spacy.en" include nil nil [206 234])
+            ("spacy.parts_of_speech" include nil nil [235 270])
+            ("codecs" include nil nil [271 284])
+            ("re" include nil nil [285 294])
+            ("scipy.spatial.distance" include nil nil [295 336])
+            ("numpy" include nil nil [337 355])
+            ("operator" include nil nil [356 371])
+            ("time" include nil nil [372 393])
+            ("sys" include nil nil [394 404])
+            ("fuzzywuzzy" include nil nil [405 441])
+            ("scipy.special" include nil nil [442 473])
+            ("logging" include nil nil [474 488])
+            ("traceback" include nil nil [489 505])
+            ("math" include nil nil [506 517])
+            ("logging.handlers" include nil nil [518 566])
+            ("logging" include nil nil [567 581])
+            ("random" include nil nil [623 636])
+            ("pprint" include nil nil [637 650])
+            ("utils" include nil nil [660 679])
+            ("services" include nil nil [680 695])
+            ("actions" include nil nil [696 717])
+            ("db" include nil nil [718 734])
+            ("Parser" type
+               (:documentation "
+    - Given some natural language, determine what it is asking you to do
+    and return an action object for this action.
+    - First, determine the kind of action it is.
+    - Next, call the necessary action handler for it.
+    - Execute this action
+
+
+
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1315 2169])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2178 2222])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2231 2255]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1153 1157])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [1176 1184]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1140 2256])
+                    ("classifyAction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2280 2284])
+                            ("sentence" variable nil (reparse-symbol function_parameters) [2286 2294]))                          )
+                        (reparse-symbol indented_block_body) [2261 2390])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2413 2417])
+                            ("s" variable nil (reparse-symbol function_parameters) [2419 2420]))                          
+                        :documentation "
+        Only returns the raw parsed response, not the action object.
+        ")
+                        (reparse-symbol indented_block_body) [2395 2690])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2705 2709])
+                            ("s" variable nil (reparse-symbol function_parameters) [2711 2712]))                          
+                        :documentation "
+        Returns the action object associated with a parsed command
+        ")
+                        (reparse-symbol indented_block_body) [2695 3666])
+                    ("getParseData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3688 3692])
+                            ("s" variable nil (reparse-symbol function_parameters) [3694 3695])
+                            ("response" variable nil (reparse-symbol function_parameters) [3697 3705]))                          
+                        :documentation "
+        Incoming sentence s
+        ")
+                        (reparse-symbol indented_block_body) [3671 6787]))                  
+                :type "class")
+                nil [843 6787])
+            ("LanguageParser" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [6891 6907]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6870 6874])
+                            ("toks" variable nil (reparse-symbol function_parameters) [6876 6880]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [6857 6908])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6923 6927]))                          )
+                        (reparse-symbol indented_block_body) [6913 6943])
+                    ("classifySentiment" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6970 6974])
+                            ("tokens" variable nil (reparse-symbol function_parameters) [6976 6982]))                          )
+                        (reparse-symbol indented_block_body) [6948 7175])
+                    ("renderResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7197 7201])
+                            ("kwargs" variable nil (reparse-symbol function_parameters) [7203 7211]))                          )
+                        (reparse-symbol indented_block_body) [7180 7536]))                  
+                :type "class")
+                nil [6823 7536])
+            ("ReviewParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [7611 7653]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7590 7594])
+                            ("toks" variable nil (reparse-symbol function_parameters) [7596 7600]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7577 7654])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7676 7680])
+                            ("s" variable nil (reparse-symbol function_parameters) [7682 7683]))                          )
+                        (reparse-symbol indented_block_body) [7658 7715])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7730 7734])
+                            ("xs" variable nil (reparse-symbol function_parameters) [7736 7738]))                          )
+                        (reparse-symbol indented_block_body) [7720 8117]))                  
+                :type "class")
+                nil [7537 8117])
+            ("TaxiParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [8190 8232]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8169 8173])
+                            ("toks" variable nil (reparse-symbol function_parameters) [8175 8179]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8156 8233])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8255 8259])
+                            ("s" variable nil (reparse-symbol function_parameters) [8261 8262]))                          )
+                        (reparse-symbol indented_block_body) [8237 8294])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8309 8313])
+                            ("xs" variable nil (reparse-symbol function_parameters) [8315 8317]))                          )
+                        (reparse-symbol indented_block_body) [8299 8692]))                  
+                :type "class")
+                nil [8118 8692])
+            ("MenuParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [8765 8807]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8744 8748])
+                            ("toks" variable nil (reparse-symbol function_parameters) [8750 8754]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8731 8808])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8830 8834])
+                            ("s" variable nil (reparse-symbol function_parameters) [8836 8837]))                          )
+                        (reparse-symbol indented_block_body) [8812 8869])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8884 8888])
+                            ("xs" variable nil (reparse-symbol function_parameters) [8890 8892]))                          )
+                        (reparse-symbol indented_block_body) [8874 9267]))                  
+                :type "class")
+                nil [8693 9267])
+            ("TimingParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [9342 9384]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9321 9325])
+                            ("toks" variable nil (reparse-symbol function_parameters) [9327 9331]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9308 9385])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9407 9411])
+                            ("s" variable nil (reparse-symbol function_parameters) [9413 9414]))                          )
+                        (reparse-symbol indented_block_body) [9389 9446])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9461 9465])
+                            ("xs" variable nil (reparse-symbol function_parameters) [9467 9469]))                          )
+                        (reparse-symbol indented_block_body) [9451 9848]))                  
+                :type "class")
+                nil [9268 9848])
+            ("CommandParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [9926 9968]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9905 9909])
+                            ("toks" variable nil (reparse-symbol function_parameters) [9911 9915]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9892 9969])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9992 9996])
+                            ("s" variable nil (reparse-symbol function_parameters) [9998 9999]))                          )
+                        (reparse-symbol indented_block_body) [9974 10031])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10046 10050])
+                            ("s" variable nil (reparse-symbol function_parameters) [10052 10053]))                          )
+                        (reparse-symbol indented_block_body) [10036 10434]))                  
+                :type "class")
+                nil [9851 10434])
+            ("PaymentParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [10511 10553]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10490 10494])
+                            ("toks" variable nil (reparse-symbol function_parameters) [10496 10500]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10477 10554])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10577 10581])
+                            ("s" variable nil (reparse-symbol function_parameters) [10583 10584]))                          )
+                        (reparse-symbol indented_block_body) [10559 10616])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10631 10635])
+                            ("s" variable nil (reparse-symbol function_parameters) [10637 10638]))                          )
+                        (reparse-symbol indented_block_body) [10621 13237]))                  
+                :type "class")
+                nil [10436 13237])
+            ("OrderParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13312 13354]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13291 13295])
+                            ("toks" variable nil (reparse-symbol function_parameters) [13297 13301]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13278 13355])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13370 13374])
+                            ("s" variable nil (reparse-symbol function_parameters) [13376 13377]))                          )
+                        (reparse-symbol indented_block_body) [13360 13412]))                  
+                :type "class")
+                nil [13239 13412])
+            ("ReserveParser" type
+               (:superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [13488 13530]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13467 13471])
+                            ("toks" variable nil (reparse-symbol function_parameters) [13473 13477]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13454 13531])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13546 13550])
+                            ("s" variable nil (reparse-symbol function_parameters) [13552 13553]))                          )
+                        (reparse-symbol indented_block_body) [13536 13659])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13682 13686])
+                            ("s" variable nil (reparse-symbol function_parameters) [13688 13689]))                          )
+                        (reparse-symbol indented_block_body) [13664 13795]))                  
+                :type "class")
+                nil [13413 13795])
+            ("LookupParser" type
+               (:documentation "
+    A specific parser to parse language that is used to lookup a given location
+    or an object
+    "
+                :superclasses ("LanguageParser")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [13984 14000]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13963 13967])
+                            ("toks" variable nil (reparse-symbol function_parameters) [13969 13973]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [13950 14001])
+                    ("extractLocation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14026 14030])
+                            ("s" variable nil (reparse-symbol function_parameters) [14032 14033]))                          )
+                        (reparse-symbol indented_block_body) [14006 14895])
+                    ("removeLocationFromQueries" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [14930 14934])
+                            ("queries" variable nil (reparse-symbol function_parameters) [14936 14943])
+                            ("location" variable nil (reparse-symbol function_parameters) [14945 14953]))                          )
+                        (reparse-symbol indented_block_body) [14900 15162])
+                    ("parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15177 15181])
+                            ("s" variable nil (reparse-symbol function_parameters) [15183 15184]))                          )
+                        (reparse-symbol indented_block_body) [15167 15279])
+                    ("parseResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15302 15306])
+                            ("s" variable nil (reparse-symbol function_parameters) [15308 15309]))                          
+                        :documentation "
+        This function is used, for now, to parse
+        incoming responses only and figure out actions to take
+        based on that
+
+        (1) Determine positive or negative sentiment
+
+        (2) Which response action does the user want to take
+        -- Reservation
+        -- Ordering food
+        -- Ordering Uber
+        -- Get Directions
+
+        This is used to populate the responseActionObject in main.py
+        Once done, this can be mapped to handleSuccessiveResponseHanlder in lookupActionHandler
+        Also, we need to figure out the appropriate response and actions in that handler
+
+        ")
+                        (reparse-symbol indented_block_body) [15284 17024])
+                    ("_parse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17040 17044])
+                            ("s" variable nil (reparse-symbol function_parameters) [17046 17047]))                          
+                        :documentation "
+        We need multiple passes
+        Nouns are the first thing. Find their deps and they should be given max score
+        As we look at their lefts, we see if they are nouns. If so give them higher score
+        Also, anything with 0.0 probability is a very rare word and should
+        be in our default list
+        ")
+                        (reparse-symbol indented_block_body) [17029 23688])
+                    ("score" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23703 23707])
+                            ("arr" variable nil (reparse-symbol function_parameters) [23709 23712]))                          )
+                        (reparse-symbol indented_block_body) [23693 23894]))                  
+                :type "class")
+                nil [13796 23894]))          
+      :file "parsers.py"
+      :pointmax 23894
+      :fsize 23893
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax '((NAME 21934 . 21936) (IF 21943 . 21945) (ELSE 21960 . 21964) (NAME 14187 . 14194) (IF 14209 . 14211) (ELSE 14227 . 14231)))
+    (semanticdb-table "actions.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Description: The maya action engine.
+Version: 0.3
+Author: viksit@gmail.com
+\"\"\"" code nil nil [28 110])
+            ("__future__" include nil nil [112 151])
+            ("spacy" include nil nil [206 218])
+            ("spacy.en.attrs" include nil nil [219 247])
+            ("spacy.en" include nil nil [248 276])
+            ("spacy.parts_of_speech" include nil nil [277 312])
+            ("codecs" include nil nil [313 326])
+            ("re" include nil nil [327 336])
+            ("scipy.spatial.distance" include nil nil [337 378])
+            ("numpy" include nil nil [379 397])
+            ("operator" include nil nil [398 413])
+            ("time" include nil nil [414 435])
+            ("sys" include nil nil [436 446])
+            ("fuzzywuzzy" include nil nil [447 483])
+            ("scipy.special" include nil nil [484 515])
+            ("logging" include nil nil [516 530])
+            ("traceback" include nil nil [531 547])
+            ("math" include nil nil [548 559])
+            ("logging.handlers" include nil nil [560 608])
+            ("logging" include nil nil [609 623])
+            ("fysom" include nil nil [624 647])
+            ("random" include nil nil [664 677])
+            ("simplejson" include nil nil [678 695])
+            ("pprint" include nil nil [696 709])
+            ("beaker.cache" include nil nil [710 747])
+            ("beaker.util" include nil nil [748 798])
+            ("time" include nil nil [799 817])
+            ("sched" include nil nil [799 817])
+            ("datetime" include nil nil [818 847])
+            ("itertools" include nil nil [848 864])
+            ("unidecode" include nil nil [865 896])
+            ("utils" include nil nil [907 919])
+            ("utils" include nil nil [920 939])
+            ("services" include nil nil [940 955])
+            ("db" include nil nil [956 972])
+            ("transaction" include nil nil [973 998])
+            ("debug" variable nil nil [1001 1014])
+            ("google_cache_opts" variable nil nil [1036 1259])
+            ("googleDetailsCache" variable nil nil [1260 1342])
+            ("Action" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1751 1767])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1816 1836])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1907 1929])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1997 2017])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2026 2044])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2053 2077]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1549 1553])
+                            ("kind" variable nil (reparse-symbol function_parameters) [1572 1576])
+                            ("target" variable nil (reparse-symbol function_parameters) [1600 1606])
+                            ("details" variable nil (reparse-symbol function_parameters) [1630 1637])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [1661 1669]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1536 2078])
+                    ("execute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2095 2099]))                          )
+                        (reparse-symbol indented_block_body) [2083 2115])
+                    ("startOrUpdate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2138 2142])
+                            ("txt" variable nil (reparse-symbol function_parameters) [2144 2147]))                          )
+                        (reparse-symbol indented_block_body) [2120 2163])
+                    ("process" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2180 2184]))                          )
+                        (reparse-symbol indented_block_body) [2168 2200])
+                    ("consume" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2217 2221])
+                            ("txt" variable nil (reparse-symbol function_parameters) [2223 2226]))                          )
+                        (reparse-symbol indented_block_body) [2205 2242])
+                    ("__str__" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2259 2263]))                          )
+                        (reparse-symbol indented_block_body) [2247 2365])
+                    ("endCmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2381 2385]))                          )
+                        (reparse-symbol indented_block_body) [2370 2606]))                  
+                :type "class")
+                nil [1510 2606])
+            ("LookupActionResponseHandler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2780 2802])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2811 2848])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2857 2884])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2893 2915]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2742 2746])
+                            ("yelpAPI" variable nil (reparse-symbol function_parameters) [2748 2755])
+                            ("details" variable nil (reparse-symbol function_parameters) [2757 2764]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2729 2916])
+                    ("setMainResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2939 2943])
+                            ("mr" variable nil (reparse-symbol function_parameters) [2945 2947]))                          )
+                        (reparse-symbol indented_block_body) [2921 3047])
+                    ("getItemInOrderFromResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3081 3085]))                          )
+                        (reparse-symbol indented_block_body) [3052 3179])
+                    ("getRandomItemFromResult" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3212 3216]))                          )
+                        (reparse-symbol indented_block_body) [3184 3330])
+                    ("getLocuData" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3351 3355])
+                            ("placeName" variable nil (reparse-symbol function_parameters) [3357 3366]))                          )
+                        (reparse-symbol indented_block_body) [3335 3770])
+                    ("" code nil (reparse-symbol indented_block_body) [3800 3835])
+                    ("getGoogleDetails" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3861 3865])
+                            ("c_id" variable nil (reparse-symbol function_parameters) [3867 3871])
+                            ("c_name" variable nil (reparse-symbol function_parameters) [3873 3879])
+                            ("c_address" variable nil (reparse-symbol function_parameters) [3881 3890])
+                            ("c_city" variable nil (reparse-symbol function_parameters) [3892 3898]))                          )
+                        (reparse-symbol indented_block_body) [3840 6131])
+                    ("handleSucessiveResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6164 6168])
+                            ("msg" variable nil (reparse-symbol function_parameters) [6170 6173])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [6175 6183])
+                            ("details" variable nil (reparse-symbol function_parameters) [6185 6192]))                          
+                        :documentation "
+        Look at the responseActionObject here.
+        Based on that, we figure out what action to drop
+        the user into and then run with that.
+        These actions are not being done on a separate context FYI.
+
+        ")
+                        (reparse-symbol indented_block_body) [6136 12444]))                  
+                :type "class")
+                nil [2681 12444])
+            ("LookupAction" type
+               (:superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [12651 12734])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12743 12776])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12785 12809])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12818 12843])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12908 12932])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12941 12970])
+                            ("self" variable nil (reparse-symbol indented_block_body) [13005 14926])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14935 14962])
+                            ("self" variable nil (reparse-symbol indented_block_body) [14971 15035]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12490 12494])
+                            ("kind" variable nil (reparse-symbol function_parameters) [12513 12517])
+                            ("target" variable nil (reparse-symbol function_parameters) [12536 12542])
+                            ("details" variable nil (reparse-symbol function_parameters) [12561 12568])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [12587 12595]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12477 15036])
+                    ("endCmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15053 15057]))                          )
+                        (reparse-symbol indented_block_body) [15042 15278])
+                    ("startOrUpdate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [15322 15326])
+                            ("msg" variable nil (reparse-symbol function_parameters) [15328 15331]))                          )
+                        (reparse-symbol indented_block_body) [15304 16161])
+                    ("consume" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16178 16182])
+                            ("txt" variable nil (reparse-symbol function_parameters) [16184 16187]))                          
+                        :documentation "
+        When a non first command comes in, the flow starts from here
+        Eg, when a user responds to the first command,
+        and any successive commands
+        If we detect that a command is actually a main command (which requires
+        a major command, we actually need to invoke it within this
+        ")
+                        (reparse-symbol indented_block_body) [16166 16738])
+                    ("on_leave_cmd_processing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16772 16776])
+                            ("e" variable nil (reparse-symbol function_parameters) [16778 16779]))                          )
+                        (reparse-symbol indented_block_body) [16744 16803])
+                    ("on_cmd_processing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [16830 16834])
+                            ("e" variable nil (reparse-symbol function_parameters) [16836 16837]))                          )
+                        (reparse-symbol indented_block_body) [16808 17247])
+                    ("on_leave_cmd_processed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17279 17283])
+                            ("e" variable nil (reparse-symbol function_parameters) [17285 17286]))                          )
+                        (reparse-symbol indented_block_body) [17252 17309])
+                    ("on_cmd_processed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17335 17339])
+                            ("e" variable nil (reparse-symbol function_parameters) [17341 17342]))                          )
+                        (reparse-symbol indented_block_body) [17314 17706])
+                    ("on_leave_cmd_processing_user_response" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17753 17757])
+                            ("e" variable nil (reparse-symbol function_parameters) [17759 17760]))                          )
+                        (reparse-symbol indented_block_body) [17711 17784])
+                    ("on_cmd_processing_user_response" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [17825 17829])
+                            ("e" variable nil (reparse-symbol function_parameters) [17831 17832]))                          )
+                        (reparse-symbol indented_block_body) [17789 17995])
+                    ("on_cmd_processed_user_response" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18035 18039])
+                            ("e" variable nil (reparse-symbol function_parameters) [18041 18042]))                          )
+                        (reparse-symbol indented_block_body) [18000 18455])
+                    ("on_cmd_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18520 18524])
+                            ("e" variable nil (reparse-symbol function_parameters) [18526 18527]))                          )
+                        (reparse-symbol indented_block_body) [18505 18552])
+                    ("processMainCommand" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18580 18584]))                          )
+                        (reparse-symbol indented_block_body) [18557 18664])
+                    ("execute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [18681 18685]))                          )
+                        (reparse-symbol indented_block_body) [18669 19094])
+                    ("run" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19107 19111]))                          )
+                        (reparse-symbol indented_block_body) [19099 19127]))                  
+                :type "class")
+                nil [12445 19127])
+            ("CommandAction" type
+               (:superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [19350 19434])
+                            ("self" variable nil (reparse-symbol indented_block_body) [19443 19467]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19176 19180])
+                            ("kind" variable nil (reparse-symbol function_parameters) [19199 19203])
+                            ("target" variable nil (reparse-symbol function_parameters) [19232 19238])
+                            ("details" variable nil (reparse-symbol function_parameters) [19260 19267])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [19289 19297]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [19163 19468])
+                    ("startOrUpdate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [19492 19496])
+                            ("msg" variable nil (reparse-symbol function_parameters) [19498 19501]))                          )
+                        (reparse-symbol indented_block_body) [19474 20103])
+                    ("endCmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20119 20123]))                          )
+                        (reparse-symbol indented_block_body) [20108 20344]))                  
+                :type "class")
+                nil [19129 20344])
+            ("PaymentAction" type
+               (:superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [20567 20651])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20660 20684])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20693 20718])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20727 20747])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20756 20780])
+                            ("self" variable nil (reparse-symbol indented_block_body) [20790 22699]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [20392 20396])
+                            ("kind" variable nil (reparse-symbol function_parameters) [20415 20419])
+                            ("target" variable nil (reparse-symbol function_parameters) [20448 20454])
+                            ("details" variable nil (reparse-symbol function_parameters) [20476 20483])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [20505 20513]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [20379 22700])
+                    ("on_cmd_end" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22722 22726])
+                            ("e" variable nil (reparse-symbol function_parameters) [22728 22729]))                          )
+                        (reparse-symbol indented_block_body) [22707 22754])
+                    ("on_received_cmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22779 22783])
+                            ("e" variable nil (reparse-symbol function_parameters) [22785 22786]))                          )
+                        (reparse-symbol indented_block_body) [22759 22802])
+                    ("on_leave_cmd_processing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22835 22839])
+                            ("e" variable nil (reparse-symbol function_parameters) [22841 22842]))                          )
+                        (reparse-symbol indented_block_body) [22807 22866])
+                    ("on_cmd_processing" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [22893 22897])
+                            ("e" variable nil (reparse-symbol function_parameters) [22899 22900]))                          )
+                        (reparse-symbol indented_block_body) [22871 23032])
+                    ("on_cmd_waiting" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23056 23060])
+                            ("e" variable nil (reparse-symbol function_parameters) [23062 23063]))                          )
+                        (reparse-symbol indented_block_body) [23037 23080])
+                    ("on_leave_cmd_processed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23112 23116])
+                            ("e" variable nil (reparse-symbol function_parameters) [23118 23119]))                          )
+                        (reparse-symbol indented_block_body) [23085 23143])
+                    ("on_cmd_processed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [23169 23173])
+                            ("e" variable nil (reparse-symbol function_parameters) [23175 23176]))                          )
+                        (reparse-symbol indented_block_body) [23148 24007])
+                    ("on_cmd_ask_confirmation" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24041 24045])
+                            ("e" variable nil (reparse-symbol function_parameters) [24047 24048]))                          )
+                        (reparse-symbol indented_block_body) [24013 24169])
+                    ("on_leave_cmd_confirmed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24201 24205])
+                            ("e" variable nil (reparse-symbol function_parameters) [24207 24208]))                          )
+                        (reparse-symbol indented_block_body) [24174 24231])
+                    ("on_cmd_confirmed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24257 24261])
+                            ("e" variable nil (reparse-symbol function_parameters) [24263 24264]))                          )
+                        (reparse-symbol indented_block_body) [24236 24385])
+                    ("on_cmd_denied" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24408 24412])
+                            ("e" variable nil (reparse-symbol function_parameters) [24414 24415]))                          )
+                        (reparse-symbol indented_block_body) [24390 24508])
+                    ("on_cmd_executed" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24533 24537])
+                            ("e" variable nil (reparse-symbol function_parameters) [24539 24540]))                          )
+                        (reparse-symbol indented_block_body) [24513 24629])
+                    ("on_cmd_denied" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24652 24656])
+                            ("e" variable nil (reparse-symbol function_parameters) [24658 24659]))                          )
+                        (reparse-symbol indented_block_body) [24634 24748])
+                    ("startOrUpdate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [24798 24802])
+                            ("inp" variable nil (reparse-symbol function_parameters) [24804 24807]))                          )
+                        (reparse-symbol indented_block_body) [24780 24983])
+                    ("consume" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25000 25004])
+                            ("txt" variable nil (reparse-symbol function_parameters) [25006 25009]))                          )
+                        (reparse-symbol indented_block_body) [24988 25315])
+                    ("process" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [25332 25336]))                          )
+                        (reparse-symbol indented_block_body) [25320 28296])
+                    ("execute" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28313 28317]))                          )
+                        (reparse-symbol indented_block_body) [28301 28432])
+                    ("endCmd" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28448 28452]))                          )
+                        (reparse-symbol indented_block_body) [28437 28673]))                  
+                :type "class")
+                nil [20345 28673])
+            ("OrderAction" type
+               (:documentation "
+    Ordering food etc.
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [28827 29063]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [28759 28763])
+                            ("kind" variable nil (reparse-symbol function_parameters) [28765 28769])
+                            ("target" variable nil (reparse-symbol function_parameters) [28779 28785])
+                            ("details" variable nil (reparse-symbol function_parameters) [28790 28797])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [28803 28811]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [28746 29064]))                  
+                :type "class")
+                nil [28676 29064])
+            ("ReserveAction" type
+               (:documentation "
+    Open table etc
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [29216 29454]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29146 29150])
+                            ("kind" variable nil (reparse-symbol function_parameters) [29152 29156])
+                            ("target" variable nil (reparse-symbol function_parameters) [29168 29174])
+                            ("details" variable nil (reparse-symbol function_parameters) [29179 29186])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [29192 29200]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [29133 29455]))                  
+                :type "class")
+                nil [29065 29455])
+            ("EndAction" type
+               (:documentation "
+    End
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [29589 29823]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29523 29527])
+                            ("kind" variable nil (reparse-symbol function_parameters) [29529 29533])
+                            ("target" variable nil (reparse-symbol function_parameters) [29541 29547])
+                            ("details" variable nil (reparse-symbol function_parameters) [29552 29559])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [29565 29573]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [29510 29824]))                  
+                :type "class")
+                nil [29457 29824])
+            ("ReviewAction" type
+               (:documentation "
+    Open table etc
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [29974 30211]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [29905 29909])
+                            ("kind" variable nil (reparse-symbol function_parameters) [29911 29915])
+                            ("target" variable nil (reparse-symbol function_parameters) [29926 29932])
+                            ("details" variable nil (reparse-symbol function_parameters) [29937 29944])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [29950 29958]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [29892 30212]))                  
+                :type "class")
+                nil [29825 30212])
+            ("TimingAction" type
+               (:documentation "
+    Open table etc
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [30362 30599]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30293 30297])
+                            ("kind" variable nil (reparse-symbol function_parameters) [30299 30303])
+                            ("target" variable nil (reparse-symbol function_parameters) [30314 30320])
+                            ("details" variable nil (reparse-symbol function_parameters) [30325 30332])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [30338 30346]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [30280 30600]))                  
+                :type "class")
+                nil [30213 30600])
+            ("TaxiAction" type
+               (:documentation "
+    Open table etc
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [30745 30982]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [30679 30683])
+                            ("kind" variable nil (reparse-symbol function_parameters) [30685 30689])
+                            ("target" variable nil (reparse-symbol function_parameters) [30698 30704])
+                            ("details" variable nil (reparse-symbol function_parameters) [30709 30716])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [30721 30729]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [30666 30983]))                  
+                :type "class")
+                nil [30601 30983])
+            ("MenuAction" type
+               (:documentation "
+    Open table etc
+    "
+                :superclasses ("Action")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [31129 31364]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [31063 31067])
+                            ("kind" variable nil (reparse-symbol function_parameters) [31069 31073])
+                            ("target" variable nil (reparse-symbol function_parameters) [31082 31088])
+                            ("details" variable nil (reparse-symbol function_parameters) [31093 31100])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [31105 31113]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [31050 31365]))                  
+                :type "class")
+                nil [30985 31365]))          
+      :file "actions.py"
+      :pointmax 31365
+      :fsize 31364
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "layer.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("yowsup.layers.interface" include nil nil [1 78])
+            ("yowsup.layers.auth" include nil nil [79 140])
+            ("yowsup.layers" include nil nil [141 180])
+            ("yowsup.layers.network" include nil nil [181 230])
+            ("yowsup.layers.protocol_contacts.protocolentities" include nil nil [231 315])
+            ("yowsup.common" include nil nil [316 354])
+            ("datetime" include nil nil [355 370])
+            ("os" include nil nil [371 380])
+            ("time" include nil nil [383 394])
+            ("main" include nil nil [397 436])
+            ("yowsup.layers.protocol_receipts.protocolentities" include nil nil [457 522])
+            ("yowsup.layers.protocol_groups.protocolentities" include nil nil [523 588])
+            ("yowsup.layers.protocol_presence.protocolentities" include nil nil [589 654])
+            ("yowsup.layers.protocol_messages.protocolentities" include nil nil [655 720])
+            ("yowsup.layers.protocol_acks.protocolentities" include nil nil [721 786])
+            ("yowsup.layers.protocol_ib.protocolentities" include nil nil [787 852])
+            ("yowsup.layers.protocol_iq.protocolentities" include nil nil [853 918])
+            ("yowsup.layers.protocol_contacts.protocolentities" include nil nil [919 984])
+            ("yowsup.layers.protocol_profiles.protocolentities" include nil nil [985 1050])
+            ("yowsup.layers.protocol_chatstate.protocolentities" include nil nil [1051 1116])
+            ("yowsup.layers.protocol_privacy.protocolentities" include nil nil [1117 1182])
+            ("yowsup.layers.axolotl.protocolentities.iq_key_get" include nil nil [1183 1268])
+            ("yowsup.layers.axolotl" include nil nil [1269 1318])
+            ("yowsup.layers.protocol_messages.protocolentities" include nil nil [1319 1406])
+            ("yowsup.layers.protocol_media.protocolentities" include nil nil [1407 1509])
+            ("yowsup.layers.protocol_receipts.protocolentities" include nil nil [1510 1601])
+            ("yowsup.layers.protocol_media.protocolentities" include nil nil [1602 1695])
+            ("yowsup.layers.protocol_acks.protocolentities" include nil nil [1696 1783])
+            ("yowsup.layers.protocol_media.protocolentities" include nil nil [1784 1874])
+            ("CREDENTIALS" variable nil nil [1876 1937])
+            ("BotLayer" type
+               (:superclasses ("YowInterfaceLayer")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [2007 2039])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2048 2066])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2075 2097]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1992 1996]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1979 2098])
+                    ("processMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2145 2149])
+                            ("mpe" variable nil (reparse-symbol function_parameters) [2151 2154]))                          )
+                        (reparse-symbol indented_block_body) [2126 2569])
+                    ("\"\"\"
+    Custom handler functions
+    \"\"\"" code nil (reparse-symbol indented_block_body) [2573 2613])
+                    ("onMediaMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2638 2642])
+                            ("messageProtocolEntity" variable nil (reparse-symbol function_parameters) [2644 2665]))                          )
+                        (reparse-symbol indented_block_body) [2619 3836])
+                    ("sendOutgoingMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3986 3990])
+                            ("msg" variable nil (reparse-symbol function_parameters) [3992 3995]))                          )
+                        (reparse-symbol indented_block_body) [3962 4438])
+                    ("onTextMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4462 4466])
+                            ("messageProtocolEntity" variable nil (reparse-symbol function_parameters) [4468 4489]))                          )
+                        (reparse-symbol indented_block_body) [4444 4843])
+                    ("\"\"\"
+    Default methods to handler incoming messages from different layers
+    \"\"\"" code nil (reparse-symbol indented_block_body) [4848 4930])
+                    ("" code nil (reparse-symbol indented_block_body) [4958 4969])
+                    ("onMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4988 4992])
+                            ("messageProtocolEntity" variable nil (reparse-symbol function_parameters) [4994 5015]))                          )
+                        (reparse-symbol indented_block_body) [4974 5358])
+                    ("" code nil (reparse-symbol indented_block_body) [5386 5397])
+                    ("onReceipt" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5416 5420])
+                            ("entity" variable nil (reparse-symbol function_parameters) [5422 5428]))                          )
+                        (reparse-symbol indented_block_body) [5402 5536])
+                    ("" code nil (reparse-symbol indented_block_body) [5564 5570])
+                    ("onIq" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5584 5588])
+                            ("entity" variable nil (reparse-symbol function_parameters) [5590 5596]))                          )
+                        (reparse-symbol indented_block_body) [5575 5704])
+                    ("\"\"\"
+    def onEvent(self, event):
+        print \"----> Event received: \", event.getName(), event.args
+
+        if event.getName() == \"pingevent\":
+            print \"sending ping\"
+            entity = PingIqProtocolEntity(to = YowConstants.DOMAIN)
+            self.toLower(entity)
+            self.pingcount += 1
+            # print(\"Pingcount: {0}\").format(self.pingcount)
+            if self.pingcount >= 3:
+                self.pingcount = 0
+                print 'onEvent: Pingcount reached, do disconnect'
+                self.disconnect_wa()
+
+        elif event.getName() == \"event_terminate\":
+            print 'onEvent: got EVENT_TERMINATE'
+            self.terminate = True
+            self.disconnect_wa()
+
+
+        elif event.getName() == YowNetworkLayer.EVENT_STATE_DISCONNECTED:
+            print 'onEvent: Got EVENT_STATE_DISCONNECTED'
+            if not self.terminate:
+                time.sleep(10)
+                print 'onEvent: Issueing EVENT_STATE_CONNECT'
+                self.getStack().broadcastEvent(YowLayerEvent(YowNetworkLayer.EVENT_STATE_CONNECT))
+
+        elif event.getName() == YowNetworkLayer.EVENT_STATE_DISCONNECT:
+            print \"onEvent: got event state disconnect\"
+            if not self.terminate:
+                time.sleep(5)
+                print \"Connecting again\"
+                # self.getStack().setProp(YowAuthenticationProtocolLayer.PROP_CREDENTIALS, CREDENTIALS)
+                connectEvent = YowLayerEvent(YowNetworkLayer.EVENT_STATE_CONNECT)
+                self.getStack().broadcastEvent(connectEvent)
+        else:
+            print 'onEvent: Unknown Event: %s' % event.getName()
+
+    def disconnect_wa(self):
+        print 'disconnect_wa: Trigger disconnect'
+        self.getStack().broadcastEvent(YowLayerEvent(YowNetworkLayer.EVENT_STATE_DISCONNECT))
+    \"\"\"" code nil (reparse-symbol indented_block_body) [5709 7527]))                  
+                :type "class")
+                nil [1939 7528])
+            ("\"\"\"
+Documentation
+=============
+
+Image format
+ID: 1420573597-2014
+From: 12034355791-1420529685@g.us
+Type:  media
+Participant: 12034355791@s.whatsapp.net
+Media Type: image
+Has Preview: True
+MimeType: image/jpeg
+File Hash: b8ZFv0tyERA872WjgJj6VI8ym8olc5MIOLgzeQc39+k=
+URL: https://mmi232.whatsapp.net/d/AwjaHaxk2tBEZsHth2fBFFSuO6UABQwflZ7Q2Q/AgRyXTHd7IbAu7mUpykMIzOeTPY7FYPr-Eo1lFevMVuz.jpg
+IP: 198.23.87.71
+File Size: 279500
+File name: AgRyXTHd7IbAu7mUpykMIzOeTPY7FYPr-Eo1lFevMVuz.jpg
+Encoding: raw
+Width: 960
+Height: 1280
+\"\"\"" code nil nil [7528 8053]))          
+      :file "layer.py"
+      :pointmax 8054
+      :fsize 8053
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "services.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [1 16])
+            ("nltk" include nil nil [17 28])
+            ("urllib" include nil nil [29 42])
+            ("urllib2" include nil nil [43 57])
+            ("simplejson" include nil nil [58 75])
+            ("string" include nil nil [76 89])
+            ("yelp" include nil nil [90 101])
+            ("re" include nil nil [102 111])
+            ("pprint" include nil nil [112 125])
+            ("nltk" include nil nil [126 144])
+            ("sys" include nil nil [145 155])
+            ("nltk.tokenize" include nil nil [156 197])
+            ("parsedatetime" include nil nil [198 218])
+            ("abc" include nil nil [219 229])
+            ("pprint" include nil nil [230 243])
+            ("traceback" include nil nil [244 260])
+            ("pymongo" include nil nil [261 275])
+            ("os" include nil nil [276 285])
+            ("beaker.cache" include nil nil [373 410])
+            ("beaker.util" include nil nil [411 461])
+            ("time" include nil nil [462 480])
+            ("sched" include nil nil [462 480])
+            ("datetime" include nil nil [481 510])
+            ("settings" include nil nil [513 528])
+            ("DEBUG" variable nil nil [530 543])
+            ("env" variable nil nil [545 585])
+            ("config_type" code nil nil [586 629])
+            ("settings_object" variable nil nil [630 678])
+            ("print" code nil nil [680 748])
+            ("yelp_cache_opts" variable nil nil [750 967])
+            ("yelpDetailsCache" variable nil nil [968 1046])
+            ("locu_cache_opts" variable nil nil [1048 1265])
+            ("locuDetailsCache" variable nil nil [1266 1344])
+            ("\"\"\"
+
+UBER API
+Client ID
+
+A1VUVinYVvwK0nQP-__CFQ0LzvARvOj_
+
+Server Token
+
+    3vevn8YJoyOQ93q73I2JLigl8HZP643tN5d8KjbL
+
++ Add New Token
+Secret
+
+D-Jfbsz2KKterKA25gnUEJt0V5JW70fbD20vcT_3
+\"\"\"" code nil nil [1347 1534])
+            ("UberAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1583 1645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1654 1705])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1714 1770])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1780 1826])
+                            ("self" code nil (reparse-symbol indented_block_body) [1835 1890])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1900 2049]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1568 1572]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1555 2050])
+                    ("getClientId" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2071 2075]))                          )
+                        (reparse-symbol indented_block_body) [2055 2108])
+                    ("generateRideHeaders" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2137 2141])
+                            ("token" variable nil (reparse-symbol function_parameters) [2143 2148]))                          
+                        :documentation "Generate the header object that is used to make api requests.")
+                        (reparse-symbol indented_block_body) [2113 2365])
+                    ("getProducts" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2386 2390]))                          )
+                        (reparse-symbol indented_block_body) [2370 2514]))                  
+                :type "class")
+                nil [1536 2514])
+            ("RottenTomatoesAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2592 2638])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2647 2768]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2577 2581]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2564 2769])
+                    ("search" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2785 2789]))                          )
+                        (reparse-symbol indented_block_body) [2774 2881]))                  
+                :type "class")
+                nil [2535 2881])
+            ("YelpAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2930 2964]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2915 2919]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2902 2965])
+                    ("renderResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2989 2993])
+                            ("data" variable nil (reparse-symbol function_parameters) [2995 2999]))                          )
+                        (reparse-symbol indented_block_body) [2970 3130])
+                    ("naturalSnippet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3154 3158])
+                            ("k" variable nil (reparse-symbol function_parameters) [3160 3161]))                          )
+                        (reparse-symbol indented_block_body) [3135 3366])
+                    ("buildShortBusinessSnippet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3401 3405])
+                            ("resp" variable nil (reparse-symbol function_parameters) [3407 3411]))                          )
+                        (reparse-symbol indented_block_body) [3371 4863])
+                    ("buildFullBusinessSnippet" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4897 4901])
+                            ("resp" variable nil (reparse-symbol function_parameters) [4903 4907]))                          )
+                        (reparse-symbol indented_block_body) [4868 5882])
+                    ("searchTopBusiness" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5976 5980])
+                            ("place" variable nil (reparse-symbol function_parameters) [5982 5987])
+                            ("location" variable nil (reparse-symbol function_parameters) [5989 5997]))                          )
+                        (reparse-symbol indented_block_body) [5954 6154])
+                    ("getBusinessDetails" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6252 6256])
+                            ("business_id" variable nil (reparse-symbol function_parameters) [6258 6269]))                          )
+                        (reparse-symbol indented_block_body) [6229 6318])
+                    ("searchBasic" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6400 6404])
+                            ("term" variable nil (reparse-symbol function_parameters) [6406 6410])
+                            ("location" variable nil (reparse-symbol function_parameters) [6412 6420])
+                            ("sort" variable nil (reparse-symbol function_parameters) [6422 6426]))                          )
+                        (reparse-symbol indented_block_body) [6384 6478])
+                    ("searchAllBusinesses" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6574 6578])
+                            ("place" variable nil (reparse-symbol function_parameters) [6580 6585])
+                            ("location" variable nil (reparse-symbol function_parameters) [6587 6595]))                          )
+                        (reparse-symbol indented_block_body) [6550 7781]))                  
+                :type "class")
+                nil [2883 7781])
+            ("GoogleAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [7829 7833]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7816 7820]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7803 7834])
+                    ("getPlaceDetails" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7860 7864])
+                            ("placeId" variable nil (reparse-symbol function_parameters) [7866 7873]))                          )
+                        (reparse-symbol indented_block_body) [7840 8218])
+                    ("getPlaceSearch" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8242 8246])
+                            ("keyword" variable nil (reparse-symbol function_parameters) [8248 8255]))                          )
+                        (reparse-symbol indented_block_body) [8223 8747])
+                    ("getPlaceInfo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8769 8773])
+                            ("keyword" variable nil (reparse-symbol function_parameters) [8775 8782]))                          )
+                        (reparse-symbol indented_block_body) [8752 9076]))                  
+                :type "class")
+                nil [7782 9076])
+            ("WitAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9123 9177])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9186 9245])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9334 9401]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9108 9112]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9095 9402])
+                    ("analyzeText" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9423 9427])
+                            ("text" variable nil (reparse-symbol function_parameters) [9429 9433]))                          )
+                        (reparse-symbol indented_block_body) [9407 9552]))                  
+                :type "class")
+                nil [9077 9552])
+            ("OpenTableAPI" type
+               (:members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [9605 9683])
+                            ("self" variable nil (reparse-symbol indented_block_body) [9692 9723]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9590 9594]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [9577 9724])
+                    ("getPlaceInfo" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9746 9750])
+                            ("keyword" variable nil (reparse-symbol function_parameters) [9752 9759])
+                            ("zipc" variable nil (reparse-symbol function_parameters) [9761 9765]))                          )
+                        (reparse-symbol indented_block_body) [9729 9893])
+                    ("getReservationUrl" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [9920 9924])
+                            ("keyword" variable nil (reparse-symbol function_parameters) [9926 9933])
+                            ("zipc" variable nil (reparse-symbol function_parameters) [9935 9939]))                          )
+                        (reparse-symbol indented_block_body) [9898 10247]))                  
+                :type "class")
+                nil [9553 10247])
+            ("VenmoAPI" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [10330 10387])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10396 10458])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10467 10510])
+                            ("self" variable nil (reparse-symbol indented_block_body) [10519 10551]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10301 10305])
+                            ("access_token" variable nil (reparse-symbol function_parameters) [10307 10319]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [10288 10552])
+                    ("createPayload" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10575 10579])
+                            ("d" variable nil (reparse-symbol function_parameters) [10581 10582])
+                            ("action_type" variable nil (reparse-symbol function_parameters) [10584 10595]))                          )
+                        (reparse-symbol indented_block_body) [10557 10912])
+                    ("getFriendsForUser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [10939 10943])
+                            ("user_id" variable nil (reparse-symbol function_parameters) [10945 10952]))                          )
+                        (reparse-symbol indented_block_body) [10917 11169])
+                    ("getUserDetails" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11193 11197])
+                            ("user_id" variable nil (reparse-symbol function_parameters) [11199 11206]))                          )
+                        (reparse-symbol indented_block_body) [11174 11222])
+                    ("payUser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11239 11243])
+                            ("payload" variable nil (reparse-symbol function_parameters) [11245 11252]))                          )
+                        (reparse-symbol indented_block_body) [11227 11819])
+                    ("chargeUser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [11839 11843])
+                            ("payload" variable nil (reparse-symbol function_parameters) [11845 11852]))                          )
+                        (reparse-symbol indented_block_body) [11824 11893]))                  
+                :type "class")
+                nil [10260 11893])
+            ("\"\"\"
+Locu API
+<script type=\"text/javascript\" id=\"-locu-widget\" src=\"https://widget.locu.com/menuwidget/locu.widget.developer.v2.0.js?venue-id=fefa91db20ee95e9d95b&widget-key=ddc8e4fc1dc5d14a62bb018fa0f1de98005dee3d\"></script>
+wdget key: ddc8e4fc1dc5d14a62bb018fa0f1de98005dee3d
+api key: b975c46da742c730e3e80b74896fb9008f53a09a
+curl -X POST https://api.locu.com/v2/venue/search -d '{
+  \"api_key\" : \"f165c0e560d0700288c2f70cf6b26e0c2de0348f\",
+  \"fields\" : [
+    \"locu_id\",
+    \"name\",
+    \"description\",
+    \"website_url\",
+    \"location\",
+    \"contact\",
+    \"categories\",
+    \"menu_url\",
+    \"menus\",
+    \"open_hours\",
+    \"extended\",
+    \"description\",
+    \"short_name\",
+    \"external\",
+    \"delivery\"
+  ],
+  \"venue_queries\" : [
+    {
+      \"name\": \"bissap baobab\",
+      \"menus\" : { \"$present\" : true }
+    }
+  ]
+}'
+
+\"\"\"" code nil nil [11896 12716])
+            ("LocuAPI" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [12772 12828])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12837 12896])
+                            ("self" variable nil (reparse-symbol indented_block_body) [12905 12957]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12757 12761]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [12744 12958])
+                    ("" code nil (reparse-symbol indented_block_body) [12986 13017])
+                    ("searchVenue" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [13038 13042])
+                            ("term" variable nil (reparse-symbol function_parameters) [13044 13048]))                          )
+                        (reparse-symbol indented_block_body) [13022 14090]))                  
+                :type "class")
+                nil [12717 14090]))          
+      :file "services.py"
+      :pointmax 14090
+      :fsize 14089
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax '((NAME 3987 . 3995) (IF 4003 . 4005) (ELSE 4024 . 4028)))
+    (semanticdb-table "shorturl.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+URL Shortening service
+viksit@gmail.com 2015
+Maya.ai
+
+Via:
+https://raw.githubusercontent.com/lepture/flask-shorturl/master/flask_shorturl.py
+
+\"\"\"" code nil nil [1 150])
+            ("DEFAULT_ALPHABET" variable nil nil [168 220])
+            ("MIN_LENGTH" variable nil nil [221 235])
+            ("SHORT_URL_ALPHABET" variable nil nil [236 273])
+            ("SHORT_URL_MIN_LENGTH" variable nil nil [274 307])
+            ("SHORT_URL_BLOCK_SIZE" variable nil nil [308 334])
+            ("UrlEncoder" type
+               (:documentation "
+    Author: Michael Fogleman
+    License: MIT
+    Link: http://code.activestate.com/recipes/576918/ (r3)
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [542 566])
+                            ("self" variable nil (reparse-symbol indented_block_body) [575 603])
+                            ("self" code nil (reparse-symbol indented_block_body) [612 645])
+                            ("self" variable nil (reparse-symbol indented_block_body) [654 692])
+                            ("self" code nil (reparse-symbol indented_block_body) [701 723]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [502 506])
+                            ("alphabet" variable nil (reparse-symbol function_parameters) [508 516])
+                            ("block_size" variable nil (reparse-symbol function_parameters) [518 528]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [489 724])
+                    ("encode_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [744 748])
+                            ("n" variable nil (reparse-symbol function_parameters) [750 751])
+                            ("min_length" variable nil (reparse-symbol function_parameters) [753 763]))                          )
+                        (reparse-symbol indented_block_body) [729 832])
+                    ("decode_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [852 856])
+                            ("n" variable nil (reparse-symbol function_parameters) [858 859]))                          )
+                        (reparse-symbol indented_block_body) [837 905])
+                    ("encode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [921 925])
+                            ("n" variable nil (reparse-symbol function_parameters) [927 928]))                          )
+                        (reparse-symbol indented_block_body) [910 993])
+                    ("_encode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1010 1014])
+                            ("n" variable nil (reparse-symbol function_parameters) [1016 1017]))                          )
+                        (reparse-symbol indented_block_body) [998 1170])
+                    ("decode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1186 1190])
+                            ("n" variable nil (reparse-symbol function_parameters) [1192 1193]))                          )
+                        (reparse-symbol indented_block_body) [1175 1258])
+                    ("_decode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1275 1279])
+                            ("n" variable nil (reparse-symbol function_parameters) [1281 1282]))                          )
+                        (reparse-symbol indented_block_body) [1263 1435])
+                    ("enbase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1451 1455])
+                            ("x" variable nil (reparse-symbol function_parameters) [1457 1458])
+                            ("min_length" variable nil (reparse-symbol function_parameters) [1460 1470]))                          )
+                        (reparse-symbol indented_block_body) [1440 1623])
+                    ("_enbase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1640 1644])
+                            ("x" variable nil (reparse-symbol function_parameters) [1646 1647]))                          )
+                        (reparse-symbol indented_block_body) [1628 1808])
+                    ("debase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1824 1828])
+                            ("x" variable nil (reparse-symbol function_parameters) [1830 1831]))                          )
+                        (reparse-symbol indented_block_body) [1813 2006]))                  
+                :type "class")
+                nil [337 2006])
+            ("ShortUrl" type
+               (:documentation "
+    ShortUrl Interface.
+    Create an instance is simple::
+        su = ShortUrl()
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [2164 2168]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2149 2153]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2136 2169])
+                    ("encoder" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2200 2204]))                          
+                        :decorators 
+                          ( ("property" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [2174 2465])
+                    ("encode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2481 2485])
+                            ("n" variable nil (reparse-symbol function_parameters) [2487 2488]))                          )
+                        (reparse-symbol indented_block_body) [2470 2529])
+                    ("decode" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2545 2549])
+                            ("n" variable nil (reparse-symbol function_parameters) [2551 2552]))                          )
+                        (reparse-symbol indented_block_body) [2534 2593])
+                    ("enbase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2609 2613])
+                            ("n" variable nil (reparse-symbol function_parameters) [2615 2616]))                          )
+                        (reparse-symbol indented_block_body) [2598 2711])
+                    ("debase" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2727 2731])
+                            ("n" variable nil (reparse-symbol function_parameters) [2733 2734]))                          )
+                        (reparse-symbol indented_block_body) [2716 2775])
+                    ("encode_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2795 2799])
+                            ("n" variable nil (reparse-symbol function_parameters) [2801 2802]))                          
+                        :documentation "
+        Encode the id number to a short url.
+        ::
+            >>> su = ShortUrl()
+            >>> su.encode_url(12)
+        ")
+                        (reparse-symbol indented_block_body) [2780 3047])
+                    ("decode_url" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3067 3071])
+                            ("n" variable nil (reparse-symbol function_parameters) [3073 3074]))                          
+                        :documentation "
+        Decode the short url into the id number.
+        ::
+            >>> su = ShortUrl()
+            >>> su.decode_url('zkf2n')
+        ")
+                        (reparse-symbol indented_block_body) [3052 3274]))                  
+                :type "class")
+                nil [2008 3274]))          
+      :file "shorturl.py"
+      :pointmax 3274
+      :fsize 3273
+      :lastmodtime '(21792 19117 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "api.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Description: The maya action engine.
+Version: 0.2
+Author: viksit@gmail.com
+\"\"\"" code nil nil [26 108])
+            ("__future__" include nil nil [110 149])
+            ("requests" include nil nil [164 179])
+            ("flask" include nil nil [180 296])
+            ("constants" include nil nil [297 320])
+            ("sqlite3" include nil nil [321 335])
+            ("urllib" include nil nil [336 349])
+            ("urllib2" include nil nil [350 364])
+            ("simplejson" include nil nil [365 382])
+            ("os" include nil nil [383 392])
+            ("rauth" include nil nil [393 424])
+            ("flask.ext.stormpath" include nil nil [426 474])
+            ("flask.ext.stormpath" include nil nil [475 527])
+            ("flask_shorturl" include nil nil [528 563])
+            ("db" include nil nil [573 589])
+            ("app" variable nil nil [591 612])
+            ("env" variable nil nil [795 834])
+            ("print" code nil nil [835 881])
+            ("app" code nil nil [882 944])
+            ("app" variable nil nil [945 968])
+            ("stormpath_manager" variable nil nil [970 1011])
+            ("getVenmoAuthURL" function nil nil [1013 1453])
+            ("getUberAuthURL" function nil nil [1454 2136])
+            ("getContext" function (:arguments 
+              ( ("kwargs" variable nil (reparse-symbol function_parameters) [2153 2161]))              ) nil [2138 2296])
+            ("\"\"\"
+- User comes in through /welcome?phone=12034355791
+- We store the phone in a session variable
+- Redirect the user to /test2
+- Once the user has logged in, we check if the user exists
+- If the user has a phone number, then add it
+- Done.
+
+Question - how do you fetch a user from stormpath? Don't.
+
+From /apps,
+- When the user authenticates, get them to update access token in the local sqlite3 db. Same as before.
+
+
+Routes:
+/ -> /home
+/home - static landing page + login etc
+/welcome?phone=.. - registration flow start
+/profile - update phone number, add app authorizations
+/login - default
+/logout - default
+/register - default
+
+\"\"\"" code nil nil [2371 3007])
+            ("" code nil nil [3018 3039])
+            ("deauthorize_uber" function nil nil [3040 3207])
+            ("" code nil nil [3219 3238])
+            ("authorize_uber" function nil nil [3239 4614])
+            ("" code nil nil [4626 4648])
+            ("deauthorize_venmo" function nil nil [4649 4881])
+            ("" code nil nil [4892 4912])
+            ("authorize_venmo" function (:documentation "
+    Venmo redirects back to this url with an authorization code.
+    Take this code, and do a fetch, get the access code,
+    Update the local database with this user
+    Redirect to the profile page.
+    ") nil [4913 6179])
+            ("" code nil nil [6190 6202])
+            ("welcome" function nil nil [6203 6373])
+            ("" code nil nil [6384 6396])
+            ("profile" function (:decorators 
+              ( ("login_required" function (:type "decorator") nil nil))              ) nil [6397 9113])
+            ("" code nil nil [9195 9214])
+            ("send_js" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [9227 9231]))              ) nil [9215 9296])
+            ("" code nil nil [9307 9327])
+            ("send_css" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [9341 9345]))              ) nil [9328 9411])
+            ("" code nil nil [9422 9442])
+            ("send_img" function (:arguments 
+              ( ("path" variable nil (reparse-symbol function_parameters) [9456 9460]))              ) nil [9443 9526])
+            ("" code nil nil [9538 9543])
+            ("" code nil nil [9554 9563])
+            ("index" function nil nil [9564 9818])
+            ("" code nil nil [9829 9838])
+            ("menu" function nil nil [9839 10024])
+            ("" code nil nil [10036 10045])
+            ("ping" function nil nil [10046 10074])
+            ("if" code nil nil [10075 10269]))          
+      :file "api.py"
+      :pointmax 10269
+      :fsize 10268
+      :lastmodtime '(21806 56751 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "main.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Description: The maya action engine.
+Version: 0.2
+Author: viksit@gmail.com
+\"\"\"" code nil nil [26 108])
+            ("__future__" include nil nil [110 149])
+            ("spacy" include nil nil [164 176])
+            ("spacy.en.attrs" include nil nil [177 205])
+            ("spacy.en" include nil nil [206 234])
+            ("spacy.parts_of_speech" include nil nil [235 270])
+            ("codecs" include nil nil [271 284])
+            ("re" include nil nil [285 294])
+            ("scipy.spatial.distance" include nil nil [295 336])
+            ("numpy" include nil nil [337 355])
+            ("operator" include nil nil [356 371])
+            ("time" include nil nil [372 393])
+            ("sys" include nil nil [394 404])
+            ("fuzzywuzzy" include nil nil [405 441])
+            ("scipy.special" include nil nil [442 473])
+            ("logging" include nil nil [474 488])
+            ("traceback" include nil nil [489 505])
+            ("math" include nil nil [506 517])
+            ("logging.handlers" include nil nil [518 566])
+            ("logging" include nil nil [567 581])
+            ("random" include nil nil [623 636])
+            ("simplejson" include nil nil [637 654])
+            ("utils" include nil nil [680 692])
+            ("services" include nil nil [693 708])
+            ("actions" include nil nil [709 730])
+            ("parsers" include nil nil [731 752])
+            ("transaction" include nil nil [753 778])
+            ("fysom" include nil nil [779 802])
+            ("debug" variable nil nil [804 816])
+            ("log" variable nil nil [818 850])
+            ("MessageHandler" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [1261 1265]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1241 1245])
+                            ("msc" variable nil (reparse-symbol function_parameters) [1247 1250]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1228 1266])
+                    ("processMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1398 1402])
+                            ("msg" variable nil (reparse-symbol function_parameters) [1404 1407]))                          )
+                        (reparse-symbol indented_block_body) [1379 1423])
+                    ("sendResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1543 1547])
+                            ("response" variable nil (reparse-symbol function_parameters) [1549 1557]))                          )
+                        (reparse-symbol indented_block_body) [1526 1573]))                  
+                :type "class")
+                nil [1193 1573])
+            ("TerminalMessageHandler" type
+               (:superclasses ("MessageHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [1675 1723])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1732 1799])
+                            ("self" variable nil (reparse-symbol indented_block_body) [1808 1867]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1639 1643])
+                            ("messageHandlerClass" variable nil (reparse-symbol function_parameters) [1645 1664]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1626 1868])
+                    ("begin" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1883 1887])
+                            ("user_input" variable nil (reparse-symbol function_parameters) [1889 1899]))                          )
+                        (reparse-symbol indented_block_body) [1873 2342])
+                    ("processMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2366 2370])
+                            ("msg" variable nil (reparse-symbol function_parameters) [2372 2375]))                          )
+                        (reparse-symbol indented_block_body) [2347 2420])
+                    ("sendResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2442 2446])
+                            ("response" variable nil (reparse-symbol function_parameters) [2448 2456]))                          )
+                        (reparse-symbol indented_block_body) [2425 2497]))                  
+                :type "class")
+                nil [1575 2497])
+            ("WhatsappMessageHandler" type
+               (:superclasses ("MessageHandler")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [2599 2782])
+                            ("print" code nil (reparse-symbol indented_block_body) [2790 2846]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2563 2567])
+                            ("sendResponseFn" variable nil (reparse-symbol function_parameters) [2569 2583]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2550 2847])
+                    ("processFakeMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2875 2879])
+                            ("txt" variable nil (reparse-symbol function_parameters) [2881 2884]))                          )
+                        (reparse-symbol indented_block_body) [2852 3493])
+                    ("processIncomingMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3526 3530])
+                            ("mpe" variable nil (reparse-symbol function_parameters) [3532 3535]))                          )
+                        (reparse-symbol indented_block_body) [3499 4445])
+                    ("processWAMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4471 4475])
+                            ("mpe" variable nil (reparse-symbol function_parameters) [4477 4480]))                          )
+                        (reparse-symbol indented_block_body) [4450 6367])
+                    ("getMetaOutputFn" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6392 6396])
+                            ("responseFn" variable nil (reparse-symbol function_parameters) [6398 6408])
+                            ("fromId" variable nil (reparse-symbol function_parameters) [6410 6416])
+                            ("rid" variable nil (reparse-symbol function_parameters) [6418 6421]))                          
+                        :documentation "
+        We need to create an output function that when given a particular
+        messaeg to send back to whatsapp, we know who to send it back to.
+        This context is available at this point - so we create a new meta
+        function, that wraps the whatsapp response function along with the
+        outgoing message and from ID
+        ")
+                        (reparse-symbol indented_block_body) [6372 7379])
+                    ("getWaContext" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7401 7405])
+                            ("msg" variable nil (reparse-symbol function_parameters) [7407 7410])
+                            ("txt" variable nil (reparse-symbol function_parameters) [7412 7415]))                          )
+                        (reparse-symbol indented_block_body) [7384 8400])
+                    ("processMessage" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8493 8497])
+                            ("msg" variable nil (reparse-symbol function_parameters) [8499 8502]))                          )
+                        (reparse-symbol indented_block_body) [8474 12414])
+                    ("_errorResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12438 12442])
+                            ("key" variable nil (reparse-symbol function_parameters) [12444 12447])
+                            ("waContext" variable nil (reparse-symbol function_parameters) [12449 12458])
+                            ("outputFn" variable nil (reparse-symbol function_parameters) [12460 12468]))                          )
+                        (reparse-symbol indented_block_body) [12419 12824])
+                    ("sendResponse" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [12846 12850])
+                            ("response" variable nil (reparse-symbol function_parameters) [12852 12860]))                          )
+                        (reparse-symbol indented_block_body) [12829 12901]))                  
+                :type "class")
+                nil [2498 12901])
+            ("if" code nil nil [12902 12998])
+            ("print" code nil nil [13008 13026]))          
+      :file "main.py"
+      :pointmax 13027
+      :fsize 13026
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "settings.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("constants" include nil nil [1 63])
+            ("Config" type
+               (:superclasses ("object")
+                :members 
+                  ( ("SECRET_KEY" variable nil (reparse-symbol indented_block_body) [91 114])
+                    ("STORMPATH_API_KEY_FILE" variable nil (reparse-symbol indented_block_body) [197 262])
+                    ("STORMPATH_APPLICATION" variable nil (reparse-symbol indented_block_body) [267 297])
+                    ("STORMPATH_REQUIRE_MIDDLE_NAME" variable nil (reparse-symbol indented_block_body) [329 366])
+                    ("STORMPATH_ENABLE_MIDDLE_NAME" variable nil (reparse-symbol indented_block_body) [371 407])
+                    ("STORMPATH_ENABLE_GOOGLE" variable nil (reparse-symbol indented_block_body) [413 444])
+                    ("STORMPATH_SOCIAL" variable nil (reparse-symbol indented_block_body) [449 663])
+                    ("STORMPATH_REDIRECT_URL" variable nil (reparse-symbol indented_block_body) [668 703]))                  
+                :type "class")
+                nil [65 704])
+            ("ProdConfig" type
+               (:superclasses ("Config")
+                :members 
+                  ( ("DEBUG" variable nil (reparse-symbol indented_block_body) [799 812])
+                    ("REAL_TRANSACTIONS" variable nil (reparse-symbol indented_block_body) [817 841])
+                    ("SERVER_NAME" variable nil (reparse-symbol indented_block_body) [846 877]))                  
+                :type "class")
+                nil [705 878])
+            ("DevConfig" type
+               (:superclasses ("Config")
+                :members 
+                  ( ("DEBUG" variable nil (reparse-symbol indented_block_body) [908 920])
+                    ("REAL_TRANSACTIONS" variable nil (reparse-symbol indented_block_body) [925 950])
+                    ("SERVER_NAME" variable nil (reparse-symbol indented_block_body) [1036 1061]))                  
+                :type "class")
+                nil [879 1062]))          
+      :file "settings.py"
+      :pointmax 1062
+      :fsize 1061
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "classifiers.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("numpy" include nil nil [1 19])
+            ("spacy" include nil nil [20 32])
+            ("spacy.en.attrs" include nil nil [33 61])
+            ("spacy.en" include nil nil [62 90])
+            ("spacy.parts_of_speech" include nil nil [91 126])
+            ("time" include nil nil [127 148])
+            ("codecs" include nil nil [149 162])
+            ("numpy" include nil nil [163 184])
+            ("numpy.linalg" include nil nil [185 214])
+            ("sklearn.ensemble" include nil nil [215 266])
+            ("pandas" include nil nil [267 286])
+            ("numpy" include nil nil [287 308])
+            ("numpy.linalg" include nil nil [309 338])
+            ("sklearn.cross_validation" include nil nil [339 392])
+            ("re" include nil nil [393 402])
+            ("nltk" include nil nil [403 414])
+            ("pandas" include nil nil [415 434])
+            ("nltk.corpus" include nil nil [435 468])
+            ("sklearn" include nil nil [469 542])
+            ("sklearn.cross_validation" include nil nil [543 581])
+            ("numpy" include nil nil [582 600])
+            ("pandas" include nil nil [601 620])
+            ("matplotlib.pyplot" include nil nil [621 652])
+            ("sklearn.naive_bayes" include nil nil [653 710])
+            ("sklearn.metrics" include nil nil [711 755])
+            ("sklearn.ensemble" include nil nil [756 803])
+            ("sklearn" include nil nil [804 831])
+            ("sklearn.svm" include nil nil [832 859])
+            ("sklearn.linear_model" include nil nil [860 906])
+            ("gensim.models" include nil nil [907 941])
+            ("gensim" include nil nil [942 955])
+            ("sklearn.externals" include nil nil [956 992])
+            ("sklearn.feature_extraction.text" include nil nil [993 1053])
+            ("sklearn.feature_extraction.text" include nil nil [1054 1113])
+            ("sklearn.naive_bayes" include nil nil [1114 1184])
+            ("sklearn.pipeline" include nil nil [1186 1223])
+            ("sklearn.feature_extraction.text" include nil nil [1224 1283])
+            ("sklearn.svm" include nil nil [1284 1330])
+            ("sklearn.feature_extraction.text" include nil nil [1331 1391])
+            ("sklearn.multiclass" include nil nil [1392 1442])
+            ("sklearn" include nil nil [1443 1466])
+            ("getTokens" function (:arguments 
+              ( ("sentence" variable nil (reparse-symbol function_parameters) [1483 1491])
+                ("removeStops" variable nil (reparse-symbol function_parameters) [1493 1504]))              ) nil [1469 1676])
+            ("train" variable nil nil [1694 1780])
+            ("test" variable nil nil [1781 1865])
+            ("X_train" variable nil nil [1866 1893])
+            ("y_train" variable nil nil [1894 1924])
+            ("X_test" variable nil nil [1925 1950])
+            ("y_test" variable nil nil [1951 1979])
+            ("num_features" variable nil nil [2019 2037])
+            ("min_word_count" variable nil nil [2070 2088])
+            ("num_workers" variable nil nil [2112 2127])
+            ("context" variable nil nil [2173 2185])
+            ("downsampling" variable nil nil [2217 2236])
+            ("cosine" variable nil nil [2280 2339])
+            ("gnb" variable nil nil [2582 2600])
+            ("mnb" variable nil nil [2730 2751])
+            ("BaseClassifier" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [2828 2876])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2885 2899])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2963 2985])
+                            ("None" code nil (reparse-symbol indented_block_body) [3027 3031]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2801 2805])
+                            ("model" variable nil (reparse-symbol function_parameters) [2807 2812])
+                            ("clf" variable nil (reparse-symbol function_parameters) [2814 2817]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2788 3032])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3047 3051])
+                            ("X_train" variable nil (reparse-symbol function_parameters) [3053 3060])
+                            ("y_train" variable nil (reparse-symbol function_parameters) [3062 3069]))                          )
+                        (reparse-symbol indented_block_body) [3037 3085])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3102 3106])
+                            ("X_test" variable nil (reparse-symbol function_parameters) [3108 3114]))                          )
+                        (reparse-symbol indented_block_body) [3090 3130])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3148 3152])
+                            ("X" variable nil (reparse-symbol function_parameters) [3154 3155])
+                            ("y" variable nil (reparse-symbol function_parameters) [3157 3158]))                          )
+                        (reparse-symbol indented_block_body) [3135 3174])
+                    ("saveModel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3193 3197])
+                            ("filename" variable nil (reparse-symbol function_parameters) [3199 3207]))                          )
+                        (reparse-symbol indented_block_body) [3179 3257])
+                    ("loadModel" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3276 3280])
+                            ("filename" variable nil (reparse-symbol function_parameters) [3282 3290]))                          )
+                        (reparse-symbol indented_block_body) [3262 3341])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3359 3363])
+                            ("X" variable nil (reparse-symbol function_parameters) [3365 3366])
+                            ("y" variable nil (reparse-symbol function_parameters) [3368 3369]))                          
+                        :documentation "
+        Evaluate this classifier
+        ")
+                        (reparse-symbol indented_block_body) [3346 3856]))                  
+                :type "class")
+                nil [2754 3856])
+            ("SpacyWord2VecClassifier" type
+               (:superclasses ("BaseClassifier")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [3949 3972])
+                            ("self" variable nil (reparse-symbol indented_block_body) [4002 4020])
+                            ("super" code nil (reparse-symbol indented_block_body) [4029 4079]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3922 3926])
+                            ("model" variable nil (reparse-symbol function_parameters) [3928 3933])
+                            ("clf" variable nil (reparse-symbol function_parameters) [3935 3938]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [3909 4080])
+                    ("getWordVector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4103 4107])
+                            ("word" variable nil (reparse-symbol function_parameters) [4109 4113]))                          )
+                        (reparse-symbol indented_block_body) [4085 4161])
+                    ("makeFeatureVec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4185 4189])
+                            ("words" variable nil (reparse-symbol function_parameters) [4191 4196]))                          
+                        :documentation "
+        Function to average all of the word vectors in a given
+        paragraph
+        ")
+                        (reparse-symbol indented_block_body) [4166 4599])
+                    ("getAvgFeatureVecs" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [4626 4630])
+                            ("sentences" variable nil (reparse-symbol function_parameters) [4632 4641]))                          
+                        :documentation "
+        Given a set of sentences (each one a list of words), calculate
+        the average feature vector for each one and return a 2D numpy array
+        ")
+                        (reparse-symbol indented_block_body) [4604 5105])
+                    ("getTokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5124 5128])
+                            ("sentence" variable nil (reparse-symbol function_parameters) [5130 5138])
+                            ("removeStops" variable nil (reparse-symbol function_parameters) [5140 5151]))                          )
+                        (reparse-symbol indented_block_body) [5110 5444])
+                    ("getSentenceVec" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5468 5472])
+                            ("sentence" variable nil (reparse-symbol function_parameters) [5474 5482])
+                            ("removeStops" variable nil (reparse-symbol function_parameters) [5484 5495]))                          
+                        :documentation "
+        Clean sentence, tokenize, use word vecs averaged out
+        remove stopwords
+        ")
+                        (reparse-symbol indented_block_body) [5449 5739])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [5754 5758])
+                            ("X_train" variable nil (reparse-symbol function_parameters) [5760 5767])
+                            ("y_train" variable nil (reparse-symbol function_parameters) [5769 5776]))                          
+                        :documentation "
+        Train the given classifier with training data
+        ")
+                        (reparse-symbol indented_block_body) [5744 6048])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6065 6069])
+                            ("X_test" variable nil (reparse-symbol function_parameters) [6071 6077]))                          
+                        :documentation "
+        Test
+        ")
+                        (reparse-symbol indented_block_body) [6053 6235])
+                    ("predictSentence" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6260 6264])
+                            ("sentence" variable nil (reparse-symbol function_parameters) [6266 6274]))                          
+                        :documentation "
+        Predict single sentence
+        ")
+                        (reparse-symbol indented_block_body) [6240 6451])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [6469 6473])
+                            ("X" variable nil (reparse-symbol function_parameters) [6475 6476])
+                            ("y" variable nil (reparse-symbol function_parameters) [6478 6479]))                          
+                        :documentation "
+        Evaluate this classifier
+        ")
+                        (reparse-symbol indented_block_body) [6456 7019]))                  
+                :type "class")
+                nil [3858 7019])
+            ("GensimWord2VecClassifier" type
+               (:superclasses ("SpacyWord2VecClassifier")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [7164 7222]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7137 7141])
+                            ("model" variable nil (reparse-symbol function_parameters) [7143 7148])
+                            ("clf" variable nil (reparse-symbol function_parameters) [7150 7153]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [7124 7223])
+                    ("getWordVector" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7246 7250])
+                            ("word" variable nil (reparse-symbol function_parameters) [7252 7256]))                          )
+                        (reparse-symbol indented_block_body) [7228 7318])
+                    ("getTokens" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7337 7341])
+                            ("sentence" variable nil (reparse-symbol function_parameters) [7343 7351])
+                            ("removeStops" variable nil (reparse-symbol function_parameters) [7353 7364]))                          )
+                        (reparse-symbol indented_block_body) [7323 7548])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7563 7567])
+                            ("X_train" variable nil (reparse-symbol function_parameters) [7569 7576])
+                            ("y_train" variable nil (reparse-symbol function_parameters) [7578 7585]))                          
+                        :documentation "
+        Train the given classifier with training data
+        ")
+                        (reparse-symbol indented_block_body) [7553 7857])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [7874 7878])
+                            ("X_test" variable nil (reparse-symbol function_parameters) [7880 7886]))                          
+                        :documentation "
+        Test
+        ")
+                        (reparse-symbol indented_block_body) [7862 8044]))                  
+                :type "class")
+                nil [7063 8044])
+            ("TFIDFClassifier" type
+               (:superclasses ("BaseClassifier")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("super" code nil (reparse-symbol indented_block_body) [8127 8185]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8107 8111])
+                            ("clf" variable nil (reparse-symbol function_parameters) [8113 8116]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [8094 8186])
+                    ("train" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8201 8205])
+                            ("X_train" variable nil (reparse-symbol function_parameters) [8207 8214])
+                            ("y_train" variable nil (reparse-symbol function_parameters) [8216 8223]))                          )
+                        (reparse-symbol indented_block_body) [8191 8533])
+                    ("predict" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8550 8554])
+                            ("X_test" variable nil (reparse-symbol function_parameters) [8556 8562]))                          )
+                        (reparse-symbol indented_block_body) [8538 8903])
+                    ("evaluate" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [8921 8925])
+                            ("X" variable nil (reparse-symbol function_parameters) [8927 8928])
+                            ("y" variable nil (reparse-symbol function_parameters) [8930 8931]))                          
+                        :documentation "
+        Evaluate this classifier
+        ")
+                        (reparse-symbol indented_block_body) [8908 9418]))                  
+                :type "class")
+                nil [8051 9418]))          
+      :file "classifiers.py"
+      :pointmax 9418
+      :fsize 9417
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax '((NAME 2994 . 2998) (IF 3013 . 3015) (ELSE 3022 . 3026)))
+    (semanticdb-table "utils.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("__future__" include nil nil [1 40])
+            ("spacy" include nil nil [55 67])
+            ("spacy.en" include nil nil [68 96])
+            ("spacy.parts_of_speech" include nil nil [97 132])
+            ("codecs" include nil nil [133 146])
+            ("re" include nil nil [147 156])
+            ("scipy.spatial.distance" include nil nil [157 198])
+            ("numpy" include nil nil [199 217])
+            ("operator" include nil nil [218 233])
+            ("time" include nil nil [234 255])
+            ("sys" include nil nil [256 266])
+            ("fuzzywuzzy" include nil nil [267 303])
+            ("scipy.special" include nil nil [304 335])
+            ("logging" include nil nil [336 350])
+            ("traceback" include nil nil [351 367])
+            ("math" include nil nil [368 379])
+            ("logging.handlers" include nil nil [380 428])
+            ("logging" include nil nil [429 443])
+            ("string" include nil nil [444 457])
+            ("pickle" include nil nil [458 471])
+            ("sklearn.naive_bayes" include nil nil [472 542])
+            ("pandas" include nil nil [543 562])
+            ("uuid" include nil nil [563 574])
+            ("classifiers" include nil nil [585 624])
+            ("zip_regex" variable nil nil [735 787])
+            ("table" variable nil nil [788 819])
+            ("nlp" variable nil nil [820 835])
+            ("t" variable nil nil [853 904])
+            ("removePunctuation" function (:arguments 
+              ( ("s" variable nil (reparse-symbol function_parameters) [947 948]))              ) nil [925 1001])
+            ("getUUID" function nil nil [1002 1062])
+            ("getCurTimeMilis" function nil nil [1063 1107])
+            ("getLoggerFor" function (:arguments 
+              ( ("moduleName" variable nil (reparse-symbol function_parameters) [1126 1136]))              ) nil [1109 1603])
+            ("sigmoid" function (:arguments 
+              ( ("x" variable nil (reparse-symbol function_parameters) [1634 1635]))              ) nil [1622 1668])
+            ("softmax" function
+               (:documentation "Calculate the softmax of a list of numbers w.
+    @param w: list of numbers
+    @return a list of the same length as w of non-negative numbers
+    >>> softmax([0.1, 0.2])
+    array([ 0.47502081,  0.52497919])
+    >>> softmax([-0.1, 0.2])
+    array([ 0.42555748,  0.57444252])
+    >>> softmax([0.9, -10])
+    array([  9.99981542e-01,   1.84578933e-05])
+    >>> softmax([0, 10])
+    array([  4.53978687e-05,   9.99954602e-01])
+    "
+                :arguments 
+                  ( ("w" variable nil (reparse-symbol function_parameters) [1681 1682])
+                    ("t" variable nil (reparse-symbol function_parameters) [1684 1685]))                  )
+                nil [1669 2214])
+            ("GlobalData" type
+               (:documentation "
+    Class that loads data only once and populates various objects of data
+    in the globaldata namespace
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("print" code nil (reparse-symbol indented_block_body) [2398 2427])
+                            ("st" variable nil (reparse-symbol indented_block_body) [2436 2447])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2456 2550])
+                            ("print" code nil (reparse-symbol indented_block_body) [2559 2601])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2610 2697])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2706 2808])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2817 2870])
+                            ("print" code nil (reparse-symbol indented_block_body) [2880 2929])
+                            ("self" variable nil (reparse-symbol indented_block_body) [2939 3042])
+                            ("print" code nil (reparse-symbol indented_block_body) [3051 3092])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3231 3315])
+                            ("print" code nil (reparse-symbol indented_block_body) [3433 3485])
+                            ("\"\"\"
+        train = pd.read_csv(\"data/train_actions_labeled.csv\", delimiter=\"|\", encoding=\"utf-8\")
+        test = pd.read_csv(\"data/test_actions_labeled.csv\", delimiter=\"|\", encoding=\"utf-8\")
+        X_train = train[\"sentence\"]
+        y_train = train[\"action_type\"]
+        X_test = test[\"sentence\"]
+        y_test = test[\"action_type\"]
+        \"\"\"" code nil (reparse-symbol indented_block_body) [3538 3887])
+                            ("self" variable nil (reparse-symbol indented_block_body) [3896 3946])
+                            ("self" code nil (reparse-symbol indented_block_body) [4015 4081])
+                            ("print" code nil (reparse-symbol indented_block_body) [4090 4138]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2383 2387]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [2370 4139]))                  
+                :type "class")
+                nil [2218 4139])
+            ("G" variable nil nil [4140 4156]))          
+      :file "utils.py"
+      :pointmax 4157
+      :fsize 4156
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "testnlp.py"
+      :major-mode 'python-mode
+      :tags nil
+      :file "testnlp.py"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(21806 56752 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "yelp.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Yelp API v2.0 code sample.
+
+This program demonstrates the capability of the Yelp API version 2.0
+by using the Search API to query for businesses by a search term and location,
+and the Business API to query additional information about the top result
+from the search query.
+
+Please refer to http://www.yelp.com/developers/documentation for the API documentation.
+
+This program requires the Python oauth2 library, which you can install via:
+`pip install -r requirements.txt`.
+
+Sample usage of the program:
+`python sample.py --term=\"bars\" --location=\"San Francisco, CA\"`
+\"\"\"" code nil nil [25 600])
+            ("argparse" include nil nil [601 616])
+            ("json" include nil nil [617 628])
+            ("pprint" include nil nil [629 642])
+            ("sys" include nil nil [643 653])
+            ("urllib" include nil nil [654 667])
+            ("urllib2" include nil nil [668 682])
+            ("oauth2" include nil nil [684 697])
+            ("DEBUG" variable nil nil [699 710])
+            ("API_HOST" variable nil nil [712 737])
+            ("DEFAULT_TERM" variable nil nil [738 761])
+            ("DEFAULT_LOCATION" variable nil nil [762 800])
+            ("SEARCH_LIMIT" variable nil nil [801 818])
+            ("SEARCH_PATH" variable nil nil [819 846])
+            ("BUSINESS_PATH" variable nil nil [847 878])
+            ("CONSUMER_KEY" variable nil nil [945 984])
+            ("CONSUMER_SECRET" variable nil nil [985 1032])
+            ("TOKEN" variable nil nil [1033 1075])
+            ("TOKEN_SECRET" variable nil nil [1076 1120])
+            ("request" function
+               (:documentation "Prepares OAuth authentication and sends the request to the API.
+
+    Args:
+        host (str): The domain host of the API.
+        path (str): The path of the API after the domain.
+        url_params (dict): An optional set of query parameters in the request.
+
+    Returns:
+        dict: The JSON response from the request.
+
+    Raises:
+        urllib2.HTTPError: An error occurs from the HTTP request.
+    "
+                :arguments 
+                  ( ("host" variable nil (reparse-symbol function_parameters) [1135 1139])
+                    ("path" variable nil (reparse-symbol function_parameters) [1141 1145])
+                    ("url_params" variable nil (reparse-symbol function_parameters) [1147 1157]))                  )
+                nil [1123 2648])
+            ("search" function
+               (:documentation "Query the Search API by a search term and location.
+
+    Args:
+        term (str): The search term passed to the API.
+        location (str): The search location passed to the API.
+
+    Returns:
+        dict: The JSON response from the request.
+    "
+                :arguments 
+                  ( ("term" variable nil (reparse-symbol function_parameters) [2660 2664])
+                    ("location" variable nil (reparse-symbol function_parameters) [2666 2674])
+                    ("sort" variable nil (reparse-symbol function_parameters) [2676 2680]))                  )
+                nil [2649 3340])
+            ("get_business" function
+               (:documentation "Query the Business API by a business ID.
+
+    Args:
+        business_id (str): The ID of the business to query.
+
+    Returns:
+        dict: The JSON response from the request.
+    "
+                :arguments 
+                  ( ("business_id" variable nil (reparse-symbol function_parameters) [3358 3369]))                  )
+                nil [3341 3690])
+            ("query_api" function
+               (:documentation "Queries the API by the input values from the user.
+
+    Args:
+        term (str): The search term to query.
+        location (str): The location of the business to query.
+    "
+                :arguments 
+                  ( ("term" variable nil (reparse-symbol function_parameters) [3705 3709])
+                    ("location" variable nil (reparse-symbol function_parameters) [3711 3719]))                  )
+                nil [3691 4494])
+            ("main" function nil nil [4495 5050])
+            ("if" code nil nil [5052 5090]))          
+      :file "yelp.py"
+      :pointmax 5090
+      :fsize 5089
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax '((INDENT_BLOCK 4968 . 5050) (NEWLINE 4967 . 4968) (COLON 4966 . 4967) (TRY 4864 . 4867) (AS 4958 . 4960)))
+    (semanticdb-table "db.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("\"\"\"
+Description: The maya action engine.
+Version: 0.2
+Author: viksit@gmail.com
+\"\"\"" code nil nil [26 108])
+            ("sqlite3" include nil nil [110 124])
+            ("uuid" include nil nil [125 136])
+            ("MayaDB" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("self" variable nil (reparse-symbol indented_block_body) [193 223])
+                            ("self" variable nil (reparse-symbol indented_block_body) [232 277])
+                            ("self" variable nil (reparse-symbol indented_block_body) [286 315]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [178 182]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [165 316])
+                    ("createUserTable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [369 373]))                          )
+                        (reparse-symbol indented_block_body) [349 660])
+                    ("createUpdateUser" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [707 711])
+                            ("userData" variable nil (reparse-symbol function_parameters) [713 721]))                          )
+                        (reparse-symbol indented_block_body) [686 1022])
+                    ("getUserByPhone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1052 1056])
+                            ("phone" variable nil (reparse-symbol function_parameters) [1058 1063]))                          )
+                        (reparse-symbol indented_block_body) [1033 1213])
+                    ("createVenmoTable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1251 1255]))                          )
+                        (reparse-symbol indented_block_body) [1230 1422])
+                    ("createVenmoRecord" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1475 1479])
+                            ("phone" variable nil (reparse-symbol function_parameters) [1481 1486])
+                            ("venmo_access_token" variable nil (reparse-symbol function_parameters) [1488 1506])
+                            ("meta" variable nil (reparse-symbol function_parameters) [1508 1512]))                          )
+                        (reparse-symbol indented_block_body) [1453 1708])
+                    ("getVenmoTokenByPhone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1744 1748])
+                            ("phone" variable nil (reparse-symbol function_parameters) [1750 1755]))                          )
+                        (reparse-symbol indented_block_body) [1719 1924])
+                    ("deleteVenmoTokenForPhone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1965 1969])
+                            ("phone" variable nil (reparse-symbol function_parameters) [1971 1976]))                          )
+                        (reparse-symbol indented_block_body) [1936 2093])
+                    ("createUberTable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2130 2134]))                          )
+                        (reparse-symbol indented_block_body) [2110 2299])
+                    ("createUberRecord" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2351 2355])
+                            ("phone" variable nil (reparse-symbol function_parameters) [2357 2362])
+                            ("uber_access_token" variable nil (reparse-symbol function_parameters) [2364 2381])
+                            ("meta" variable nil (reparse-symbol function_parameters) [2383 2387]))                          )
+                        (reparse-symbol indented_block_body) [2330 2581])
+                    ("getUberTokenByPhone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2616 2620])
+                            ("phone" variable nil (reparse-symbol function_parameters) [2622 2627]))                          )
+                        (reparse-symbol indented_block_body) [2592 2795])
+                    ("deleteUberTokenForPhone" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2834 2838])
+                            ("phone" variable nil (reparse-symbol function_parameters) [2840 2845]))                          )
+                        (reparse-symbol indented_block_body) [2806 2961])
+                    ("dropTable" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [2992 2996])
+                            ("tableName" variable nil (reparse-symbol function_parameters) [2998 3007]))                          )
+                        (reparse-symbol indented_block_body) [2978 3082])
+                    ("close" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [3103 3107]))                          )
+                        (reparse-symbol indented_block_body) [3093 3163]))                  
+                :type "class")
+                nil [138 3163])
+            ("if" code nil nil [3165 3687]))          
+      :file "db.py"
+      :pointmax 3687
+      :fsize 3686
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "constants.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("CONSUMER_ID" variable nil nil [65 85])
+            ("CONSUMER_SECRET" variable nil nil [122 174])
+            ("APP_SECRET" variable nil nil [222 273])
+            ("UBER_CLIENT_ID" variable nil nil [282 333])
+            ("UBER_CLIENT_SECRET" variable nil nil [334 397]))          
+      :file "constants.py"
+      :pointmax 398
+      :fsize 397
+      :lastmodtime '(21796 26129 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "transaction.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("requests" include nil nil [1 16])
+            ("nltk" include nil nil [17 28])
+            ("urllib" include nil nil [29 42])
+            ("urllib2" include nil nil [43 57])
+            ("simplejson" include nil nil [58 75])
+            ("string" include nil nil [76 89])
+            ("yelp" include nil nil [90 101])
+            ("re" include nil nil [102 111])
+            ("pprint" include nil nil [112 125])
+            ("nltk" include nil nil [126 144])
+            ("sys" include nil nil [145 155])
+            ("nltk.tokenize" include nil nil [156 197])
+            ("parsedatetime" include nil nil [198 218])
+            ("abc" include nil nil [219 229])
+            ("pprint" include nil nil [230 243])
+            ("uuid" include nil nil [244 255])
+            ("traceback" include nil nil [256 272])
+            ("fuzzywuzzy" include nil nil [273 303])
+            ("GLOBAL_TXNS" variable nil nil [409 425])
+            ("Transaction" type
+               (:documentation "
+    A transaction happens when the first item in a conversation is started.
+    "
+                :superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("if" code nil (reparse-symbol indented_block_body) [589 692])
+                            ("self" variable nil (reparse-symbol indented_block_body) [700 718]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [563 567])
+                            ("id" variable nil (reparse-symbol function_parameters) [569 571]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [550 719])
+                    ("showState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [738 742]))                          )
+                        (reparse-symbol indented_block_body) [724 774])
+                    ("getId" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [789 793]))                          )
+                        (reparse-symbol indented_block_body) [779 819])
+                    ("setState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [837 841])
+                            ("key" variable nil (reparse-symbol function_parameters) [843 846])
+                            ("val" variable nil (reparse-symbol function_parameters) [848 851]))                          )
+                        (reparse-symbol indented_block_body) [824 887])
+                    ("getState" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [905 909])
+                            ("key" variable nil (reparse-symbol function_parameters) [911 914]))                          )
+                        (reparse-symbol indented_block_body) [892 1026]))                  
+                :type "class")
+                nil [427 1026])
+            ("TransactionFactory" type
+               (:superclasses ("object")
+                :members 
+                  ( ("__init__" function
+                       (:suite 
+                          ( ("pass" code nil (reparse-symbol indented_block_body) [1093 1097]))                          
+                        :parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1078 1082]))                          
+                        :constructor-flag t)
+                        (reparse-symbol indented_block_body) [1065 1098])
+                    ("getTransaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1122 1126])
+                            ("id" variable nil (reparse-symbol function_parameters) [1128 1130]))                          )
+                        (reparse-symbol indented_block_body) [1103 1174])
+                    ("getOrCreateTransaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1206 1210])
+                            ("id" variable nil (reparse-symbol function_parameters) [1212 1214]))                          )
+                        (reparse-symbol indented_block_body) [1179 1346])
+                    ("existsTransaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1373 1377])
+                            ("id" variable nil (reparse-symbol function_parameters) [1379 1381]))                          )
+                        (reparse-symbol indented_block_body) [1351 1459])
+                    ("createTransaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1486 1490])
+                            ("id" variable nil (reparse-symbol function_parameters) [1492 1494]))                          )
+                        (reparse-symbol indented_block_body) [1464 1570])
+                    ("endTransaction" function
+                       (:parent "dummy"
+                        :arguments 
+                          ( ("self" variable nil (reparse-symbol function_parameters) [1594 1598])
+                            ("id" variable nil (reparse-symbol function_parameters) [1600 1602]))                          )
+                        (reparse-symbol indented_block_body) [1575 1691]))                  
+                :type "class")
+                nil [1027 1691])
+            ("TxnFactory" variable nil nil [1692 1725]))          
+      :file "transaction.py"
+      :pointmax 1726
+      :fsize 1725
+      :lastmodtime '(21763 13593 0 0)
+      :unmatched-syntax nil)
+    (semanticdb-table "fysom.py"
+      :file "fysom.py"
+      :fsize 11505
+      :lastmodtime '(21763 16137 0 0)))
+  :file "!Users!viksit!work!maya!maya!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

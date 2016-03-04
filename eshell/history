@@ -1,0 +1,5 @@
+uname -a
+clear
+ls
+ssh ubuntu@gpu-t
+ssh ubuntu@gpu-tf
